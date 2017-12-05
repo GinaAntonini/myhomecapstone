@@ -38,9 +38,5 @@ app.config(function($routeProvider){
         templateUrl: 'partials/improvements/improvearchives.html',
         controller: 'ImproveArchivesCtrl',
       })          
-      .when("/login", {
-        templateUrl: 'partials/login.html',
-        controller: 'LoginCtrl'
-      })
       .otherwise('/login');
   });
