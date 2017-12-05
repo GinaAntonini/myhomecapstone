@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" ng-controller="NavbarCtrl">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -10,17 +10,21 @@
             </button>
             <a class="navbar-brand" href="#">MyHome</a>
           </div>
-            
-            <ul class="nav navbar-nav navbar-right">
+
+          <ul class="nav navbar-nav navbar-right" ng-show="!uid">
+              <li><a ng-href="#!/login" id="login" class="loginnav">Login</a></li>
+            </ul>
+          
+            <ul class="nav navbar-nav navbar-right" ng-show="uid">
               <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Create <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Create <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a ng-href="#!/create/newtask">New Maintenance Task</a></li>
                       <li><a ng-href="#!/create/newproject">New Improvement Project</a></li>
                     </ul>
                   </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maintenance <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maintenance <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a ng-href="#!/maintenance/viewtasks">View Task List</a></li>
                   <li><a ng-href="#!/maintenance/seasonalview">Seasonal View</a></li>
@@ -28,13 +32,14 @@
                 </ul>
               </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Improvements <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Improvements <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a ng-href="#!/improvements/viewprojects">View Projects</a></li>
                   <li><a ng-href="#!/improvements/seasonal">Seasonal View</a></li>
                   <li><a ng-href="#!/improvements/archives">Archives</a></li>
                 </ul>
               </li>
+              <li><a ng-click="logoutUser()" class="logoutnav">Logout</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
