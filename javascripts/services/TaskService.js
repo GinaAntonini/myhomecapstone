@@ -18,9 +18,27 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
     });
   };
 
+  const getCompletedTasksFromFirebase = (userUid) => {
+		let tasks = [];
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/maintenance.json?orderBy="uid"&equalTo="${userUid}"`).then((results) => {
+        let fbTasks = results.data;
+        Object.keys(fbTasks).forEach((key) => {
+          if (fbTasks[key].completed){
+            fbTasks[key].id = key;
+            tasks.push(fbTasks[key]);
+          }
+        });
+        resolve(tasks);
+      }).catch((err) => {
+        reject(err);
+      });
+    });
+  };
+
 	const postNewMaintenanceTask = (newTask) => {
 		return $http.post(`${FIREBASE_CONFIG.databaseURL}/maintenance.json`, JSON.stringify(newTask));
     };
     
-    return {getCurrentTasksFromFirebase, postNewMaintenanceTask};
+    return {getCurrentTasksFromFirebase, getCompletedTasksFromFirebase, postNewMaintenanceTask};
 });

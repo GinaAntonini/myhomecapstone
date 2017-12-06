@@ -1,0 +1,16 @@
+<div class="text-center" ng-controller="MaintArchivesCtrl">
+        <h3>Maintenance Archives</h3>
+        <div class="tasks">
+            <div ng-repeat="complete in completed" class="col-sm-6 col-md-4">
+                <div class="task">
+                    <p class="taskName">Task Name: {{complete.taskName}}</p>
+                    <p class="description">Details: {{complete.taskDescription}}</p>
+                    <p class="category">Category: {{complete.category}}</p>
+                    <p class="toolsRequired">Tools Required: {{complete.toolsRequired}}</p>
+                    <p class="materials">Materials To Purchase: {{complete.materialsToPurchase}}</p>
+                    <p class="cost">Projected Cost: {{complete.projectedCost}}</p>
+                    <p class="season">Season to Complete: {{complete.seasonToComplete}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
