@@ -39,6 +39,14 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
 	const postNewMaintenanceTask = (newTask) => {
 		return $http.post(`${FIREBASE_CONFIG.databaseURL}/maintenance.json`, JSON.stringify(newTask));
     };
+
+  const editMaintenanceTask = (taskId, task) => {
+    return $http.put(`${FIREBASE_CONFIG.databaseURL}/maintenance/${taskId}.json`, JSON.stringify(task));
+  };
+
+  const getSingleMaintenanceTask = (taskId) => {
+    return $http.get(`${FIREBASE_CONFIG.databaseURL}/maintenance/${taskId}.json`);
+  };
     
-    return {getCurrentTasksFromFirebase, getCompletedTasksFromFirebase, postNewMaintenanceTask};
+    return {getCurrentTasksFromFirebase, getCompletedTasksFromFirebase, postNewMaintenanceTask, editMaintenanceTask, getSingleMaintenanceTask};
 });
