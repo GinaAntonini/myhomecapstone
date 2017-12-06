@@ -1,0 +1,131 @@
+<form class="form-horizontal" name="editTaskForm" ng-controller="EditTaskCtrl">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>Edit Task</legend>
+        
+        <!-- Task Name -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Task Name">Task Name</label>  
+          <div class="col-md-6">
+          <input id="Task Name" name="Task Name" type="text" ng-model="task.taskName" placeholder="Enter a name for your task (ex. Clean Gutters)" class="form-control input-md" required="">
+            
+          </div>
+        </div>
+        
+        <!-- Task Description -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="description">Task Description</label>
+          <div class="col-md-4">                     
+            <textarea class="form-control" id="description" ng-model="task.taskDescription" name="description">Enter a brief description of the task at hand. </textarea>
+          </div>
+        </div>
+        
+        <!-- File Button --> 
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="attachImage">Attach Photo</label>
+          <div class="col-md-4">
+            <input id="attachImage" name="attachImage" class="input-file" type="file">
+          </div>
+        </div>
+        
+        <!-- Date to be completed -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="datetocomplete">Date to be Completed</label>  
+          <div class="col-md-4">
+          <input id="datetocomplete" name="datetocomplete" type="text" ng-model="task.dateToBeCompleted" placeholder="Date picker will go here." class="form-control input-md" required="">
+            
+          </div>
+        </div>
+        
+        <!-- Category -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="category">Task Category</label>
+          <div class="col-md-4"> 
+            <label class="radio-inline" for="category-0">
+              <input type="radio" name="category" id="category-0" ng-model="task.category" value="Interior" checked="checked">
+              Interior
+            </label> 
+            <label class="radio-inline" for="category-1">
+              <input type="radio" name="category" id="category-1" ng-model="task.category" value="Exterior">
+              Exterior
+            </label>
+          </div>
+        </div>
+        
+        <!-- Season  -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="selectbasic">Select Season For Completion</label>
+          <div class="col-md-4">
+            <select id="selectbasic" name="selectbasic" class="form-control" ng-model="task.seasonToComplete">
+              <option value="Spring">Spring</option>
+              <option value="Summer">Summer</option>
+              <option value="Fall">Fall</option>
+              <option value="Winter">Winter</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Contractor? -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="contractor">Will you hire a contractor of DIY?</label>
+          <div class="col-md-4"> 
+            <label class="radio-inline" for="contractor-0">
+              <input type="radio" name="contractor" id="contractor-0" value="true" checked="checked" ng-model="task.contractorNeeded">
+              Hire Contractor
+            </label> 
+            <label class="radio-inline" for="contractor-1">
+              <input type="radio" name="contractor" id="contractor-1" value="false" ng-model="task.contractorNeeded">
+              DIY
+            </label>
+          </div>
+        </div>
+        
+        <!-- Materials To Buy -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="materials">Materials To Buy</label>  
+          <div class="col-md-8">
+          <input id="materials" name="materials" type="text" ng-model="task.materialsToPurchase" placeholder="List any materials that will have to be purchased." class="form-control input-md" required="">
+          </div>
+        </div>
+        
+        <!-- Projected Cost -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="cost">Projected Cost</label>  
+            <div class="col-md-6">
+                <input id="cost" name="cost" type="text" ng-model="task.projectedCost" placeholder="How much will this task cost to complete?" class="form-control input-md" required="">
+          </div>
+        </div>
+        
+        <!-- Tools Required -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="tools">Tools Required</label>  
+            <div class="col-md-5">
+                <input id="tools" name="tools" type="text" ng-model="task.toolsRequired" placeholder="List any tools that will be required" class="form-control input-md" required="">   
+            </div>
+        </div>
+
+        <!-- Completed? -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="completed">Is the task completed?</label>
+            <div class="col-md-4"> 
+                <label class="radio-inline" for="completed-0">
+                    <input type="radio" name="completed" id="completed-0" ng-model="task.completed" ng-value=true checked="checked">Yes
+                </label> 
+                <label class="radio-inline" for="completed-1">
+                    <input type="radio" name="completed" id="completed-1" ng-model="task.completed" ng-value=false>No
+                </label>
+            </div>
+        </div>
+
+        <!-- Add Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="submit"></label>
+            <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-primary" ng-disabled="editTaskForm.$invalid" ng-click="editTaskInFirebase(task, tasks)">Update Task</button>
+            </div>
+        </div>
+
+        </fieldset>
+        </form>
+        

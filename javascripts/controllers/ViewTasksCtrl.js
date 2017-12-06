@@ -2,7 +2,6 @@
 
 app.controller("ViewTasksCtrl", function($location, $rootScope, $scope, TaskService){
     const getTasks = () => {
-		// $scope.newTask = [];
     		TaskService.getCurrentTasksFromFirebase($rootScope.uid).then((results) => {
     		$scope.tasks = results;
     	}).catch((err) => {
@@ -10,4 +9,9 @@ app.controller("ViewTasksCtrl", function($location, $rootScope, $scope, TaskServ
    	});
    };
    getTasks();
+
+   $scope.editTask = (taskId) => {
+	$location.path(`/maintenance/edit/${taskId}`);
+	};
+
 });

@@ -41,6 +41,11 @@ app.config(function($routeProvider){
         controller: 'ViewTasksCtrl',
         resolve: {isAuth}
       })
+      .when("/maintenance/edit/:id", {
+        templateUrl: 'partials/maintenance/edittask.html',
+        controller: 'EditTaskCtrl',
+        resolve: {isAuth}
+      })
       .when("/maintenance/seasonalview", {
         templateUrl: 'partials/maintenance/maintseasonal.html',
         controller: 'MaintSeasonalCtrl',
@@ -54,6 +59,11 @@ app.config(function($routeProvider){
       .when("/improvements/viewprojects", {
         templateUrl: 'partials/improvements/viewprojects.html',
         controller: 'ViewProjectsCtrl',
+        resolve: {isAuth}
+      })
+      .when("/improvements/edit/:id", {
+        templateUrl: 'partials/improvements/editproject.html',
+        controller: 'EditProjectCtrl',
         resolve: {isAuth}
       })
       .when("/improvements/seasonal", {
