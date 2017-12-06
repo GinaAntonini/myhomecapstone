@@ -13,7 +13,7 @@
             "materialsToPurchase": "gloves",
             "contractorNeeded": false,
             "linkToDiy":"link to a youtube video showing you how to clean out gutters",
-            "completed": false,
+            "completed": true,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
 		},
 		"task1": { 
@@ -50,7 +50,7 @@
 		},
 		"task3": { 
 			"taskId": 0,
-            "taskName": "Clean Gutters",
+            "taskName": "Aerate Lawn",
             "category": "exterior",
             "taskDescription": "The gutters on the left side of the home are filled with leaves and need to be cleaned out.",
 			"seasonToComplete": "Spring",
@@ -61,7 +61,7 @@
             "materialsToPurchase": "gloves",
             "contractorNeeded": false,
             "linkToDiy":"link to a youtube video showing you how to clean out gutters",
-            "completed": false,
+            "completed": true,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
         "task4": { 
