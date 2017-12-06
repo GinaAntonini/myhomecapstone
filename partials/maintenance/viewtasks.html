@@ -1,0 +1,16 @@
+<div class="text-center" ng-controller="ViewTasksCtrl">
+    <h3>My Current Tasks</h3>
+    <div class="tasks">
+        <div ng-repeat="task in tasks" class="col-sm-6 col-md-4">
+            <div class="task">
+                <p class="taskName">Task Name: {{task.taskName}}</p>
+                <p class="description">Details: {{task.taskDescription}}</p>
+                <p class="category">Category: {{task.category}}</p>
+                <p class="toolsRequired">Tools Required: {{task.toolsRequired}}</p>
+                <p class="materials">Materials To Purchase: {{task.materialsToPurchase}}</p>
+                <p class="cost">Projected Cost: {{task.projectedCost}}</p>
+                <p class="season">Season to Complete: {{task.seasonToComplete}}</p>
+            </div>
+        </div>
+    </div>
+</div>
