@@ -13,6 +13,7 @@
                 <p class="season">Season to Complete: {{task.seasonToComplete}}</p>
                 <div class="actionbuttons">
                     <button class="btn btn-default" ng-click="editTask(task.id)">Edit Task <i class="fa fa-edit"></i></button>
+                    <button class="btn btn-default" ng-click="deleteTaskFromFirebase(task.id)">Delete Task<i class="fa fa-trash-o"></i></button>
                 </div>
             </div>
         </div>

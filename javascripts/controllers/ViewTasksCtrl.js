@@ -10,8 +10,16 @@ app.controller("ViewTasksCtrl", function($location, $rootScope, $scope, TaskServ
    };
    getTasks();
 
-   $scope.editTask = (taskId) => {
-	$location.path(`/maintenance/edit/${taskId}`);
+    $scope.editTask = (taskId) => {
+		$location.path(`/maintenance/edit/${taskId}`);
+	};
+
+	$scope.deleteTaskFromFirebase = (taskId) => {
+		TaskService.deleteMaintenanceTask(taskId).then((result) =>{
+			getTasks();
+		}).catch((err) =>{
+		console.log("error in deleteTaskFromFirebase", err);
+    });
 	};
 
 });

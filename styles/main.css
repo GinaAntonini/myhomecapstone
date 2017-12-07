@@ -7,3 +7,13 @@
 .task {
   border: 2px solid black;
   margin: 5%; }
+
+.seasonButtons {
+  display: inline-flex;
+  flex-direction: column; }
+
+.seasonsinglebutton {
+  margin-bottom: 15%; }
+
+.seasonDiv {
+  border: 2px solid black; }
