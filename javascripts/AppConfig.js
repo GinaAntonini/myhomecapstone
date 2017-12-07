@@ -53,7 +53,7 @@ app.config(function($routeProvider){
       })
       .when("/maintenance/detail/:id", {
         templateUrl: 'partials/maintenance/taskdetail.html',
-        controller: 'MaintSeasonalCtrl',
+        controller: 'TaskDetailCtrl',
         resolve: {isAuth}
       })
       .when("/maintenance/archives", {

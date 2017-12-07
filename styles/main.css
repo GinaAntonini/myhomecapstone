@@ -1,12 +1,15 @@
 .tasks {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: row;
   margin: 5px; }
+
+.eachtask {
+  width: 100%; }
 
 .task {
   border: 2px solid black;
-  margin: 5%; }
+  margin: 2%; }
 
 .seasonButtons {
   display: inline-flex;

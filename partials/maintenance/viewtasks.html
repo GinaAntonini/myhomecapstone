@@ -1,16 +1,11 @@
 <div class="text-center" ng-controller="ViewTasksCtrl">
     <h3>My Current Tasks</h3>
     <div class="tasks">
-        <div ng-repeat="task in tasks" class="col-sm-6 col-md-4">
+        <div ng-repeat="task in tasks" class="eachtask">
             <div class="task">
                 <h3 class="taskName">{{task.taskName}}</h3>
-                <p class="date">{{task.dateToBeCompleted}}</p>
-                <p class="description">Details: {{task.taskDescription}}</p>
-                <p class="category">Category: {{task.category}}</p>
-                <p class="toolsRequired">Tools Required: {{task.toolsRequired}}</p>
-                <p class="materials">Materials To Purchase: {{task.materialsToPurchase}}</p>
-                <p class="cost">Projected Cost: {{task.projectedCost}}</p>
                 <p class="season">Season to Complete: {{task.seasonToComplete}}</p>
+                <p class="category">Category: {{task.category}}</p>
                 <div class="actionbuttons">
                     <button class="btn btn-default" ng-click="editTask(task.id)">Edit Task <i class="fa fa-edit"></i></button>
                     <button class="btn btn-default" ng-click="deleteTaskFromFirebase(task.id)">Delete Task<i class="fa fa-trash-o"></i></button>
