@@ -19,7 +19,11 @@ app.controller("ViewTasksCtrl", function($location, $rootScope, $scope, TaskServ
 			getTasks();
 		}).catch((err) =>{
 		console.log("error in deleteTaskFromFirebase", err);
-    });
+    	});
+	};
+
+	$scope.viewTaskDetail = (taskId) => {
+		$location.path(`/maintenance/detail/${taskId}`);
 	};
 
 });
