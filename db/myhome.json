@@ -252,7 +252,7 @@
             "materialsToBuy": "Stones",
             "contractorNeeded": false,
             "linkToDiy":"null",
-            "completed": false,
+            "completed": true,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
         "project5": {
@@ -272,7 +272,7 @@
             "materialsToBuy": "Mulch",
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/SL6t5SUrat0",
-            "completed": false,
+            "completed": true,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         }
     }
