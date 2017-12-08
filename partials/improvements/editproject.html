@@ -2,11 +2,11 @@
         <fieldset>
         
         <!-- Form Name -->
-        <legend>New Improvement Project</legend>
+        <legend>Edit Project</legend>
         
         <!-- Task Name -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="Task Name">Task Name</label>  
+          <label class="col-md-4 control-label" for="Task Name">Project Name</label>  
           <div class="col-md-6">
           <input id="Task Name" name="Task Name" type="text" ng-model="project.projectName" placeholder="Enter a name for your project (ex. Add 2nd Bathroom)" class="form-control input-md" required="">
             
@@ -15,7 +15,7 @@
         
         <!-- Task Description -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="description">Task Description</label>
+          <label class="col-md-4 control-label" for="description">Project Description</label>
           <div class="col-md-4">                     
             <textarea class="form-control" id="description" ng-model="project.projectDescription" name="description">Enter a brief description of the project scope. </textarea>
           </div>
@@ -40,7 +40,7 @@
         
         <!-- Category -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="category">Task Category</label>
+          <label class="col-md-4 control-label" for="category">Project Category</label>
           <div class="col-md-4"> 
             <label class="radio-inline" for="category-0">
               <input type="radio" name="category" id="category-0" ng-model="project.category" value="Interior" checked="checked">

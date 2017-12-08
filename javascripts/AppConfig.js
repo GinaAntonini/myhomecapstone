@@ -80,7 +80,12 @@ app.config(function($routeProvider){
         templateUrl: 'partials/improvements/improvearchives.html',
         controller: 'ImproveArchivesCtrl',
         resolve: {isAuth}
-      })    
+      })
+      .when("/improvements/detail/:id", {
+        templateUrl: 'partials/improvements/projectdetail.html',
+        controller: 'TaskDetailCtrl',
+        resolve: {isAuth}
+      })   
       .when("/login", {		
         templateUrl: 'partials/login.html',		
         controller: 'LoginCtrl',
