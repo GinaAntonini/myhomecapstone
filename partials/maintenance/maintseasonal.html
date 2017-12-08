@@ -1,14 +1,16 @@
-<div class="container" ng-controller="MaintSeasonalCtrl">
-        <div class="row seasonButtons">
-            <div class="col-sm-4">
-                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="">Spring</button>
-                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="">Summer</button>
-                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="">Fall</button>
-                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="">Winter</button>
+<div class="container-fluid" ng-controller="MaintSeasonalCtrl">
+        <div class="row">
+            <h2 class="text-center">Seasonal Maintenance Schedule</h2>
+            <div class="col-sm-4 seasonButtons">
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="getTasks()">Spring</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="getTasks()">Summer</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="getTasks()">Fall</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="getTasks()">Winter</button>
             </div>
-        <div class="row seasonDiv">
-            <div class="col-sm-7">
-                <h2>Tasks by Season</h2>
+            <div class="col-sm-8 seasonDiv">
+                <div ng-repeat="task in tasks">
+                    <h3 class="taskName">{{task.taskName}} <button class="btn btn-default" ng-click="markTaskCompleted(task, tasks)"><i class="fa fa-check-square-o"></i></button></h3>
+                </div>
             </div>
         </div>
     </div>

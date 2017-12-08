@@ -9,11 +9,4 @@ app.controller("TaskDetailCtrl", function($location, $rootScope, $routeParams, $
         });
     };
     getTask();
-
-    app.filter("GetYouTubeID", function () {
-        return function (text) {
-            var video_id = text.split('v=')[1].split('&')[0];
-            return video_id;
-        };
-      });
 });

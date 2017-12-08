@@ -12,9 +12,19 @@ app.controller("EditTaskCtrl", function($location, $rootScope, $routeParams, $sc
 
     $scope.editTaskInFirebase = (task) => {
 		TaskService.editMaintenanceTask($routeParams.id, task).then(() => {
+            getTasks();
             $location.path("/maintenance/viewtasks");
         }).catch((err) => {
             console.log("error in editTaskInFirebase", err);
         });
     };
+
+    const getTasks = () => {
+        TaskService.getCurrentTasksFromFirebase($rootScope.uid).then((results) => {
+        $scope.tasks = results;
+        }).catch((err) => {
+            console.log("error in getTasks", err);
+        });
+    };
+
 });
