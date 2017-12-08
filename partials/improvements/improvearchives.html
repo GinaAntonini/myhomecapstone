@@ -1,0 +1,21 @@
+<div class="text-center" ng-controller="ImproveArchivesCtrl">
+        <h3>Improvement Archives</h3>
+        <div id="custom-search-input">
+            <div class="searchbar">
+                <input class="searchinput" type="text" placeholder="Search" ng-model="searchText"/>
+            </div>
+        </div>
+        <div class="tasks">
+            <div ng-repeat="complete in completed | filter: searchText" class="col-sm-6 col-md-4 eachtask">
+                <div class="task">
+                    <p class="projectName">Task Name: {{complete.projectName}}</p>
+                    <p class="description">Details: {{complete.projectDescription}}</p>
+                    <p class="category">Category: {{complete.category}}</p>
+                    <p class="toolsRequired">Tools Required: {{complete.toolsRequired}}</p>
+                    <p class="materials">Materials To Purchase: {{complete.materialsToPurchase}}</p>
+                    <p class="cost">Projected Cost: {{complete.projectedCost}}</p>
+                    <p class="season">Season to Complete: {{complete.seasonToComplete}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
