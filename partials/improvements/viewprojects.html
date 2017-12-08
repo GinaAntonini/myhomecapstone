@@ -8,7 +8,7 @@
                     <p class="category">Category: {{project.category}}</p>
                     <div class="actionbuttons">
                         <button class="btn btn-default" ng-click="editProject(project.id)">Edit Project <i class="fa fa-edit"></i></button>
-                        <button class="btn btn-default" ng-click="">Delete Task<i class="fa fa-trash-o"></i></button>
+                        <button class="btn btn-default" ng-click="deleteProjectFromFirebase(project.id)">Delete Task<i class="fa fa-trash-o"></i></button>
                         <button class="btn btn-default" ng-click="viewProjectDetail(project.id)">View Detail<i class="fa fa-search-plus"></i></button>
                     </div>
                 </div>

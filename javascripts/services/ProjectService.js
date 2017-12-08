@@ -48,5 +48,8 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
     return $http.get(`${FIREBASE_CONFIG.databaseURL}/improvements/${projectId}.json`);
   };
 
-    return {postNewImprovementProject, getCurrentProjectsFromFirebase, getCompletedProjectsFromFirebase, editImprovementProject, getSingleImprovementProject};
+  const deleteImprovementProject = (projectId) => {
+		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/improvements/${projectId}.json`);
+  };
+    return {postNewImprovementProject, getCurrentProjectsFromFirebase, getCompletedProjectsFromFirebase, editImprovementProject, getSingleImprovementProject, deleteImprovementProject};
 });
