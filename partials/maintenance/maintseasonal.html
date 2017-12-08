@@ -2,10 +2,10 @@
         <div class="row">
             <h2 class="text-center">Seasonal Maintenance Schedule</h2>
             <div class="col-sm-4 seasonButtons">
-                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="getTasks()">Spring</button>
-                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="getTasks()">Summer</button>
-                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="getTasks()">Fall</button>
-                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" ng-click="getTasks()">Winter</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" value="Spring" ng-click="getSeason($event)">Spring</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" value="Summer" ng-click="getSeason($event)">Summer</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" value="Fall" ng-click="getSeason($event)">Fall</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" value="Winter" ng-click="getSeason($event)">Winter</button>
             </div>
             <div class="col-sm-8 seasonDiv">
                 <div ng-repeat="task in tasks">

@@ -36,6 +36,24 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
     });
   };
 
+  const getSeasonsFromFirebase = (userUid) => {
+		let tasks = [];
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/maintenance.json?orderBy="seasonToComplete"&equalTo="Spring"`).then((results) => {
+        let fbTasks = results.data;
+        Object.keys(fbTasks).forEach((key) => {
+          if (fbTasks[key].seasonToComplete){
+            fbTasks[key].id = key;
+            tasks.push(fbTasks[key]);
+          }
+        });
+        resolve(tasks);
+      }).catch((err) => {
+        reject(err);
+      });
+    });
+  };
+
 	const postNewMaintenanceTask = (newTask) => {
 		return $http.post(`${FIREBASE_CONFIG.databaseURL}/maintenance.json`, JSON.stringify(newTask));
     };
@@ -52,5 +70,5 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
 		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/maintenance/${taskId}.json`);
   };
     
-    return {getCurrentTasksFromFirebase, getCompletedTasksFromFirebase, postNewMaintenanceTask, editMaintenanceTask, deleteMaintenanceTask, getSingleMaintenanceTask};
+    return {getCurrentTasksFromFirebase, getCompletedTasksFromFirebase, postNewMaintenanceTask, editMaintenanceTask, deleteMaintenanceTask, getSingleMaintenanceTask, getSeasonsFromFirebase};
 });
