@@ -40,5 +40,13 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
 		return $http.post(`${FIREBASE_CONFIG.databaseURL}/improvements.json`, JSON.stringify(newProject));
   };
 
-    return {postNewImprovementProject, getCurrentProjectsFromFirebase, getCompletedProjectsFromFirebase};
+  const editImprovementProject = (projectId, project) => {
+    return $http.put(`${FIREBASE_CONFIG.databaseURL}/improvements/${projectId}.json`, JSON.stringify(project));
+  };
+
+  const getSingleImprovementProject = (projectId) => {
+    return $http.get(`${FIREBASE_CONFIG.databaseURL}/improvements/${projectId}.json`);
+  };
+
+    return {postNewImprovementProject, getCurrentProjectsFromFirebase, getCompletedProjectsFromFirebase, editImprovementProject, getSingleImprovementProject};
 });
