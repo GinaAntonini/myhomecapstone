@@ -17,22 +17,12 @@ app.controller("MaintSeasonalCtrl", function($http, $location, $rootScope, $scop
     }).catch((err) => {
         console.log("error in getSeasonToComplete", err);
     });
+    }; 
 
     $scope.getSeason = (event) => {
         if(event.target.value === "Spring"){
             getSeasonToComplete();
-        }
-        // } else (event.target.value === "Summer"){
-        //     getTasks();
-        // } else (event.target.value === "Fall"){
-        //     getTasks();
-        // } else (event.target.value === "Winter"){
-        //     getTasks();
-        console.log("event", event.target.value);
+           }
+           console.log("event", event.target.value);
         };
-    };
-
-     // $scope.markTaskCompleted = (taskId) => {
-        
-    // };
 });
