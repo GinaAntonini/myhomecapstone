@@ -13,4 +13,8 @@ getProjects();
     $scope.editProject = (projectId) => {
         $location.path(`/improvements/edit/${projectId}`);
     };
+
+    $scope.viewProjectDetail = (projectId) => {
+		$location.path(`/improvements/detail/${projectId}`);
+	};
 });
