@@ -9,4 +9,8 @@ app.controller("ViewProjectsCtrl", function($location, $rootScope, $scope, Proje
    });
 };
 getProjects();
+
+    $scope.editProject = (projectId) => {
+        $location.path(`/improvements/edit/${projectId}`);
+    };
 });
