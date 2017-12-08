@@ -1,0 +1,17 @@
+<div class="text-center" ng-controller="ViewProjectsCtrl">
+        <h3>My Current Projects</h3>
+        <div class="tasks">
+            <div ng-repeat="project in projects" class="eachtask">
+                <div class="task">
+                    <h3 class="projectName">{{project.projectName}}</h3>
+                    <p class="season">Season to Complete: {{project.seasonToComplete}}</p>
+                    <p class="category">Category: {{project.category}}</p>
+                    <div class="actionbuttons">
+                        <button class="btn btn-default" ng-click="">Edit Project <i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default" ng-click="">Delete Task<i class="fa fa-trash-o"></i></button>
+                        <button class="btn btn-default" ng-click="">View Detail<i class="fa fa-search-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
