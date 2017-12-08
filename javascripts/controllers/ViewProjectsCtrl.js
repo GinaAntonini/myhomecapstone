@@ -16,5 +16,13 @@ getProjects();
 
     $scope.viewProjectDetail = (projectId) => {
 		$location.path(`/improvements/detail/${projectId}`);
+    };
+    
+    $scope.deleteProjectFromFirebase = (projectId) => {
+		ProjectService.deleteImprovementProject(projectId).then((result) =>{
+			getProjects();
+		}).catch((err) =>{
+		console.log("error in deleteProjectFromFirebase", err);
+    	});
 	};
 });
