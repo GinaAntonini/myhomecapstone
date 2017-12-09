@@ -14,14 +14,12 @@ app.controller("MaintSeasonalCtrl", function($http, $location, $rootScope, $scop
     const getSeasonToComplete = (season) => {
         TaskService.getSeasonsFromFirebase(season).then((results) => {
         $scope.tasks = results;
-        console.log(results);
     }).catch((err) => {
         console.log("error in getSeasonToComplete", err);
     });
     }; 
 
     $scope.getSeason = (event) => {
-            getSeasonToComplete(event.target.value);
-           console.log("event", event.target.value);
-        };
+        getSeasonToComplete(event.target.value);
+    };
 });
