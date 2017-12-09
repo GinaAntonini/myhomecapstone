@@ -71,7 +71,7 @@ app.config(function($routeProvider){
         controller: 'EditProjectCtrl',
         resolve: {isAuth}
       })
-      .when("/improvements/seasonal", {
+      .when("/improvements/seasonalview", {
         templateUrl: 'partials/improvements/improveseasonal.html',
         controller: 'ImproveSeasonalCtrl',
         resolve: {isAuth}

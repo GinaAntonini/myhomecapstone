@@ -36,6 +36,24 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
     });
   };
 
+  const getSeasonsFromFirebase = (season) => {
+		let projects = [];
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/improvements.json?orderBy="seasonToComplete"&equalTo="${season}"`).then((results) => {
+        let fbProjects = results.data;
+        Object.keys(fbProjects).forEach((key) => {
+          if (fbProjects[key].seasonToComplete){
+            fbProjects[key].id = key;
+            projects.push(fbProjects[key]);
+          }
+        });
+        resolve(projects);
+      }).catch((err) => {
+        reject(err);
+      });
+    });
+  };
+
 	const postNewImprovementProject = (newProject) => {
 		return $http.post(`${FIREBASE_CONFIG.databaseURL}/improvements.json`, JSON.stringify(newProject));
   };
@@ -51,5 +69,11 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
   const deleteImprovementProject = (projectId) => {
 		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/improvements/${projectId}.json`);
   };
-    return {postNewImprovementProject, getCurrentProjectsFromFirebase, getCompletedProjectsFromFirebase, editImprovementProject, getSingleImprovementProject, deleteImprovementProject};
+    return {postNewImprovementProject, 
+      getCurrentProjectsFromFirebase, 
+      getCompletedProjectsFromFirebase, 
+      editImprovementProject, 
+      getSingleImprovementProject, 
+      deleteImprovementProject,
+      getSeasonsFromFirebase};
 });
