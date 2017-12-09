@@ -36,10 +36,10 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
     });
   };
 
-  const getSeasonsFromFirebase = (userUid) => {
+  const getSeasonsFromFirebase = (season) => {
 		let tasks = [];
     return $q((resolve, reject) => {
-      $http.get(`${FIREBASE_CONFIG.databaseURL}/maintenance.json?orderBy="seasonToComplete"&equalTo="Spring"`).then((results) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/maintenance.json?orderBy="seasonToComplete"&equalTo="${season}"`).then((results) => {
         let fbTasks = results.data;
         Object.keys(fbTasks).forEach((key) => {
           if (fbTasks[key].seasonToComplete){
@@ -53,7 +53,7 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
       });
     });
   };
-
+  
 	const postNewMaintenanceTask = (newTask) => {
 		return $http.post(`${FIREBASE_CONFIG.databaseURL}/maintenance.json`, JSON.stringify(newTask));
     };
