@@ -1,0 +1,17 @@
+<div class="container-fluid" ng-controller="ImproveSeasonalCtrl">
+        <div class="row">
+            <h2 class="text-center">Seasonal Improvements Schedule</h2>
+            <div class="col-sm-4 seasonButtons">
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" value="Spring" ng-click="getProjectsInSeason($event)">Spring</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" value="Summer" ng-click="getProjectsInSeason($event)">Summer</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" value="Fall" ng-click="getProjectsInSeason($event)">Fall</button>
+                <button type="button" class="btn btn-primary btn-lg seasonsinglebutton" value="Winter" ng-click="getProjectsInSeason($event)">Winter</button>
+            </div>
+            <div class="col-sm-8 seasonDiv">
+                <div ng-repeat="project in projects">
+                    <h3 class="projectName">{{project.projectName}} <button class="btn btn-default" ng-click="markProjectCompleted(project, projects)"><i class="fa fa-check-square-o"></i></button></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
