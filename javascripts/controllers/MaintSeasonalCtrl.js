@@ -11,18 +11,17 @@ app.controller("MaintSeasonalCtrl", function($http, $location, $rootScope, $scop
     };
     getTasks();
 
-    const getSeasonToComplete = () => {
-        TaskService.getSeasonsFromFirebase($rootScope.uid).then((results) => {
-        $scope.seasonToComplete = results;
+    const getSeasonToComplete = (season) => {
+        TaskService.getSeasonsFromFirebase(season).then((results) => {
+        $scope.tasks = results;
+        console.log(results);
     }).catch((err) => {
         console.log("error in getSeasonToComplete", err);
     });
     }; 
 
     $scope.getSeason = (event) => {
-        if(event.target.value === "Spring"){
-            getSeasonToComplete();
-           }
+            getSeasonToComplete(event.target.value);
            console.log("event", event.target.value);
         };
 });
