@@ -4,6 +4,7 @@ app.controller("EditTaskCtrl", function($location, $rootScope, $routeParams, $sc
     const getTaskToEdit = () => {
         TaskService.getSingleMaintenanceTask($routeParams.id).then((results) =>{
             $scope.task = results.data;
+            $scope.task.dateToBeCompleted = moment(results.data.dateToBeCompleted);
             }).catch((err) =>{
             console.log("err in getTaskToEdit", err);
         });

@@ -4,6 +4,7 @@ app.controller("EditProjectCtrl", function($location, $rootScope, $routeParams, 
     const getProjectToEdit = () => {
         ProjectService.getSingleImprovementProject($routeParams.id).then((results) =>{
             $scope.project = results.data;
+            $scope.project.dateToBeCompleted = moment(results.data.dateToBeCompleted);
             }).catch((err) =>{
             console.log("err in getProjectToEdit", err);
         });
