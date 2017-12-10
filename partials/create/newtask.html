@@ -33,8 +33,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="datetocomplete">Date to be Completed</label>  
           <div class="col-md-4">
-          <input id="datetocomplete" name="datetocomplete" type="text" ng-model="newTask.dateToBeCompleted" placeholder="Date picker will go here." class="form-control input-md" required="">
-            
+            <input id="datetocomplete" name="datetocomplete" type="text" ng-model="newTask.dateToBeCompleted" class="form-control input-md"  placeholder="Pick a date" moment-picker="newTask.dateToBeCompleted" format="MM-DD-YYYY">  
           </div>
         </div>
         

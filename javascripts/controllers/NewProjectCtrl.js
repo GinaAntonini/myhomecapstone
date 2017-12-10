@@ -5,6 +5,7 @@ app.controller("NewProjectCtrl", function($location, $rootScope, $scope, Project
         $scope.newProject.uid = $rootScope.uid;
         ProjectService.postNewImprovementProject($scope.newProject).then((results) => {
             $scope.newProject = {};
+            $scope.newProject.dateToBeCompleted = moment(results.data.dateToBeCompleted);
                 $location.url("/improvements/viewprojects");
         }).catch((error) => {
             console.log("error in addNewProjectToFirebase", error);

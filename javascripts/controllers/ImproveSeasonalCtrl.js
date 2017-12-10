@@ -9,7 +9,6 @@ app.controller("ImproveSeasonalCtrl", function($location, $rootScope, $scope, Pr
         console.log("error in getProjects", err);
     });
     };
-    getProjects();
 
     const getSeasonToComplete = (season) => {
         ProjectService.getSeasonsFromFirebase(season).then((results) => {
@@ -18,6 +17,7 @@ app.controller("ImproveSeasonalCtrl", function($location, $rootScope, $scope, Pr
         console.log("error in getSeasonToComplete", err);
     });
     }; 
+    getSeasonToComplete("Spring");
 
     $scope.getProjectsInSeason = (event) => {
         getSeasonToComplete(event.target.value);
