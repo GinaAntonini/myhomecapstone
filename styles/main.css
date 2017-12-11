@@ -13,10 +13,18 @@
 
 .seasonButtons {
   display: inline-flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-left: 5%; }
 
 .seasonsinglebutton {
-  margin-bottom: 15%; }
+  margin-bottom: 10%; }
 
-.seasonDiv {
-  border: 2px solid black; }
+.seasonImprovement {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 5%; }
+
+.scheduleHeading {
+  padding-bottom: 5%; }
+
+.seasonHeading {
+  padding-bottom: 2%; }
