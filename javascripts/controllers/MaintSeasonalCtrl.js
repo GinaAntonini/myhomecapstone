@@ -18,6 +18,7 @@ app.controller("MaintSeasonalCtrl", function($http, $location, $rootScope, $scop
         console.log("error in getSeasonToComplete", err);
     });
     }; 
+    getSeasonToComplete("Spring");
 
     $scope.getSeason = (event) => {
         getSeasonToComplete(event.target.value);
