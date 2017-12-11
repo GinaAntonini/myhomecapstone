@@ -89,6 +89,10 @@ app.config(function($routeProvider){
       .when("/login", {		
         templateUrl: 'partials/login.html',		
         controller: 'LoginCtrl',
-      })      
+      })
+      .when("/dashboard", {		
+        templateUrl: 'partials/dashboard.html',		
+        controller: 'DashboardCtrl',
+      })        
       .otherwise('/login');
   });
