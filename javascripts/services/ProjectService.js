@@ -8,8 +8,10 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
       $http.get(`${FIREBASE_CONFIG.databaseURL}/improvements.json?orderBy="uid"&equalTo="${userUid}"`).then((results) => {
         let fbProjects = results.data;
         Object.keys(fbProjects).forEach((key) => {
-          fbProjects[key].id = key;
+          if(fbProjects[key].completed === false){
+            fbProjects[key].id = key;
             projects.push(fbProjects[key]);
+          }
         });
         resolve(projects);
       }).catch((err) => {

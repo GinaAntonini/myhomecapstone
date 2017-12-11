@@ -13,7 +13,6 @@ app.controller("EditProjectCtrl", function($location, $rootScope, $routeParams, 
 
     $scope.editProjectInFirebase = (project) => {
 		ProjectService.editImprovementProject($routeParams.id, project).then(() => {
-            getProjects();
             $location.path("/improvements/viewprojects");
         }).catch((err) => {
             console.log("error in editProjectInFirebase", err);

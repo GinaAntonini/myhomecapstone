@@ -13,7 +13,6 @@ app.controller("EditTaskCtrl", function($location, $rootScope, $routeParams, $sc
 
     $scope.editTaskInFirebase = (task) => {
 		TaskService.editMaintenanceTask($routeParams.id, task).then(() => {
-            getTasks();
             $location.path("/maintenance/viewtasks");
         }).catch((err) => {
             console.log("error in editTaskInFirebase", err);

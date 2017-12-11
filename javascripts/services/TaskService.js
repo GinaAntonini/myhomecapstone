@@ -8,8 +8,10 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
       $http.get(`${FIREBASE_CONFIG.databaseURL}/maintenance.json?orderBy="uid"&equalTo="${userUid}"`).then((results) => {
         let fbTasks = results.data;
         Object.keys(fbTasks).forEach((key) => {
+          if(fbTasks[key].completed === false){
           fbTasks[key].id = key;
-            tasks.push(fbTasks[key]);
+          tasks.push(fbTasks[key]);
+          }
         });
         resolve(tasks);
       }).catch((err) => {
