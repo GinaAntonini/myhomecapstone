@@ -1,6 +1,7 @@
 "use strict";
 
 app.controller("EditProjectCtrl", function($location, $rootScope, $routeParams, $scope, ProjectService){
+    
     const getProjectToEdit = () => {
         ProjectService.getSingleImprovementProject($routeParams.id).then((results) =>{
             $scope.project = results.data;

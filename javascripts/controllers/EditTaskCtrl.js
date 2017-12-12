@@ -1,6 +1,7 @@
 "use strict";
 
 app.controller("EditTaskCtrl", function($location, $rootScope, $routeParams, $scope, TaskService){
+    
     const getTaskToEdit = () => {
         TaskService.getSingleMaintenanceTask($routeParams.id).then((results) =>{
             $scope.task = results.data;

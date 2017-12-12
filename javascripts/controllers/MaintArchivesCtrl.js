@@ -1,7 +1,7 @@
 "use strict";
 
 app.controller("MaintArchivesCtrl", function($location, $rootScope, $scope, TaskService){
-
+        
     const getCompletedTasks = () => {
     	TaskService.getCompletedTasksFromFirebase($rootScope.uid).then((results) => {
             $scope.completed = results;

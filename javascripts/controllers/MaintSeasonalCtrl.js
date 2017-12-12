@@ -1,16 +1,7 @@
 "use strict";
 
 app.controller("MaintSeasonalCtrl", function($http, $location, $rootScope, $scope, TaskService){
-    const getTasks = () => {
-        TaskService.getCurrentTasksFromFirebase($rootScope.uid).then((results) => {
-        $scope.tasks = results;
-        $location.url("/maintenance/seasonalview");
-    }).catch((err) => {
-        console.log("error in getTasks", err);
-    });
-    };
-    getTasks();
-
+    
     const getSeasonToComplete = (season) => {
         TaskService.getSeasonsFromFirebase(season).then((results) => {
         $scope.tasks = results;
@@ -20,7 +11,17 @@ app.controller("MaintSeasonalCtrl", function($http, $location, $rootScope, $scop
     }; 
     getSeasonToComplete("Spring");
 
-    $scope.getSeason = (event) => {
+    $scope.getTasksInSeason = (event) => {
         getSeasonToComplete(event.target.value);
     };
+
+    $scope.markTaskCompleted = (task) => {
+		task.completed = !task.completed;
+		TaskService.markCompleted(task.id, task.completed).then(() => {
+           getSeasonToComplete(task.seasonToComplete);
+        }).catch((err) => {
+            console.log("error in markTaskCompleted", err);
+        });
+    };
+    
 });

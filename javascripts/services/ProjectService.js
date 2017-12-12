@@ -13,7 +13,6 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
             projects.push(fbProjects[key]);
           }
         });
-        console.log(projects);
         resolve(projects);
       }).catch((err) => {
         reject(err);
