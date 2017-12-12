@@ -6,10 +6,10 @@
         </div>
         <div class="row">
             <div class="col-md-4 seasonButtons">
-                <button class="btn btn-block btn-info btn-lg seasonsinglebutton" type="button" value="Spring" ng-click="getSeason($event)">Spring</button> 
-                <button class="btn btn-block btn-info btn-lg seasonsinglebutton" type="button" value="Summer" ng-click="getSeason($event)">Summer</button> 
-                <button class="btn btn-block btn-info btn-lg seasonsinglebutton" type="button" value="Fall" ng-click="getSeason($event)">Fall</button> 
-                <button class="btn btn-block btn-info btn-lg seasonsinglebutton" type="button" value="Winter" ng-click="getSeason($event)">Winter</button>
+                <button class="btn btn-block btn-info btn-lg seasonsinglebutton" type="button" value="Spring" ng-click="getTasksInSeason($event)">Spring</button> 
+                <button class="btn btn-block btn-info btn-lg seasonsinglebutton" type="button" value="Summer" ng-click="getTasksInSeason($event)">Summer</button> 
+                <button class="btn btn-block btn-info btn-lg seasonsinglebutton" type="button" value="Fall" ng-click="getTasksInSeason($event)">Fall</button> 
+                <button class="btn btn-block btn-info btn-lg seasonsinglebutton" type="button" value="Winter" ng-click="getTasksInSeason($event)">Winter</button>
             </div>
                 <div class="col-md-8 seasonDiv">
                     <table class="table table-condensed table-hover table-striped">
@@ -24,7 +24,7 @@
                             <tr>
                                 <td>{{task.taskName}}</td>
                                 <td>{{task.dateToBeCompleted}}</td>
-                                <td><button class="btn btn-default" ng-click="markTaskCompleted(task, tasks)"><i class="fa fa-check-square-o"></i></button></td>
+                                <td><button class="btn btn-default" ng-click="markTaskCompleted(task)"><i class="fa fa-check-square-o"></i></button></td>
                             </tr>
                         </tbody>
                     </table>

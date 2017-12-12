@@ -44,7 +44,7 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
       $http.get(`${FIREBASE_CONFIG.databaseURL}/maintenance.json?orderBy="seasonToComplete"&equalTo="${season}"`).then((results) => {
         let fbTasks = results.data;
         Object.keys(fbTasks).forEach((key) => {
-          if (fbTasks[key].seasonToComplete){
+          if (fbTasks[key].seasonToComplete && fbTasks[key].completed === false){
             fbTasks[key].id = key;
             tasks.push(fbTasks[key]);
           }
@@ -64,6 +64,10 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
     return $http.put(`${FIREBASE_CONFIG.databaseURL}/maintenance/${taskId}.json`, JSON.stringify(task));
   };
 
+  const markCompleted = (taskId, completed) => {
+    return $http.patch(`${FIREBASE_CONFIG.databaseURL}/maintenance/${taskId}.json`, JSON.stringify({completed}));
+  };
+
   const getSingleMaintenanceTask = (taskId) => {
     return $http.get(`${FIREBASE_CONFIG.databaseURL}/maintenance/${taskId}.json`);
   };
@@ -72,5 +76,5 @@ app.service("TaskService", function($http, $q, FIREBASE_CONFIG){
 		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/maintenance/${taskId}.json`);
   };
     
-    return {getCurrentTasksFromFirebase, getCompletedTasksFromFirebase, postNewMaintenanceTask, editMaintenanceTask, deleteMaintenanceTask, getSingleMaintenanceTask, getSeasonsFromFirebase};
+    return {getCurrentTasksFromFirebase, getCompletedTasksFromFirebase, postNewMaintenanceTask, editMaintenanceTask, deleteMaintenanceTask, getSingleMaintenanceTask, getSeasonsFromFirebase, markCompleted};
 });

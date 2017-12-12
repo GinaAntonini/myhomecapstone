@@ -44,7 +44,7 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
       $http.get(`${FIREBASE_CONFIG.databaseURL}/improvements.json?orderBy="seasonToComplete"&equalTo="${season}"`).then((results) => {
         let fbProjects = results.data;
         Object.keys(fbProjects).forEach((key) => {
-          if (fbProjects[key].seasonToComplete){
+          if (fbProjects[key].seasonToComplete && fbProjects[key].completed === false){
             fbProjects[key].id = key;
             projects.push(fbProjects[key]);
           }
@@ -64,6 +64,10 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
     return $http.put(`${FIREBASE_CONFIG.databaseURL}/improvements/${projectId}.json`, JSON.stringify(project));
   };
 
+  const markCompleted = (projectId, completed) => {
+    return $http.patch(`${FIREBASE_CONFIG.databaseURL}/improvements/${projectId}.json`, JSON.stringify({completed}));
+  };
+
   const getSingleImprovementProject = (projectId) => {
     return $http.get(`${FIREBASE_CONFIG.databaseURL}/improvements/${projectId}.json`);
   };
@@ -77,5 +81,6 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG){
       editImprovementProject, 
       getSingleImprovementProject, 
       deleteImprovementProject,
+      markCompleted,
       getSeasonsFromFirebase};
 });
