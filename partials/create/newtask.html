@@ -21,6 +21,20 @@
           </div>
         </div>
         
+        <!-- Recurring? -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="selectbasic">How often should this task be performed?</label>
+          <div class="col-md-4">
+            <select id="selectbasic" name="selectbasic" class="form-control" ng-model="newTask.frequency">
+              <option value="Once">Once</option>
+              <option value="Annually">Annually</option>
+              <option value="Semi-Annually">Semi-Annually</option>
+              <option value="Quarterly">Quarterly</option>
+              <option value="Monthly">Monthly</option>
+            </select>
+          </div>
+        </div>
+
         <!-- File Button --> 
         <div class="form-group">
           <label class="col-md-4 control-label" for="attachImage">Attach Photo</label>
