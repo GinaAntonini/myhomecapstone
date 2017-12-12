@@ -4,6 +4,7 @@ app.controller("ViewProjectsCtrl", function($location, $rootScope, $scope, Proje
     const getProjects = () => {
         ProjectService.getCurrentProjectsFromFirebase($rootScope.uid).then((results) => {
         $scope.projects = results;
+        $scope.projects.dateToBeCompleted = moment(results.data.dateToBeCompleted);
     }).catch((err) => {
     console.log("error in getProjects", err);
    });

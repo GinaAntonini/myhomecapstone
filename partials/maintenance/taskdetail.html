@@ -11,12 +11,7 @@
                     <p class="toolsRequired">Tools Required: {{task.toolsRequired}}</p>
                     <p class="materials">Materials To Purchase: {{task.materialsToPurchase}}</p>
                     <p class="cost">Projected Cost: {{task.projectedCost}}</p>
-                    <div class="actionbuttons">
-                        <button class="btn btn-default" ng-click="editTask(task.id)">Edit Task <i class="fa fa-edit"></i></button>
-                        <button class="btn btn-default" ng-click="deleteTaskFromFirebase(task.id)">Delete Task<i class="fa fa-trash-o"></i></button>
-                    </div>
-                </div>
-                </div>
+                    <p class="date">Date To Be Completed: {{task.dateToBeCompleted}}</p>
             </div>
         </div>
-    </div>
+</div>

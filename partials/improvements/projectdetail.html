@@ -7,13 +7,13 @@
                 <div class="youtubeVideo">
                     {{project.linkToDiy}}
                 </div>
-                    <p class="description">Details: {{project.projectDescription}}</p>
-                    <p class="toolsRequired">Tools Required: {{project.toolsRequired}}</p>
-                    <p class="materials">Materials To Purchase: {{project.materialsToPurchase}}</p>
-                    <p class="cost">Projected Cost: {{project.projectedCost}}</p>
-                    </div>
-                </div>
+                <p class="description">Details: {{project.projectDescription}}</p>
+                <p class="toolsRequired">Tools Required: {{project.toolsRequired}}</p>
+                <p class="materials">Materials To Purchase: {{project.materialsToPurchase}}</p>
+                <p class="cost">Projected Cost: {{project.projectedCost}}</p>
+            </div>
+            <div class="actionbuttons">
+                <button class="btn btn-default" ng-click="editProjectFromDetail(project.id)">Edit Project <i class="fa fa-edit"></i></button>
             </div>
         </div>
-    </div>
 </div>
