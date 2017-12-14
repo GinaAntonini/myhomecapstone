@@ -1,0 +1,13 @@
+<div class="search" ng-controller="SearchProductsCtrl">
+    <div class="input-group col-xs-6 col-xs-offset-3">
+        <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
+        <input ng-keypress="onEnterSearch($event)" type="text" class="form-control" aria-describedby="basic-addon1">
+        <div id="products">
+            <div ng-repeat="product in products" class="col-sm-6 col-md-4 product">
+                <div class="thumbnail">
+                    <h3 class="productTitle">{{product.Title}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
