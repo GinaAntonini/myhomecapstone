@@ -93,6 +93,10 @@ app.config(function($routeProvider){
       .when("/dashboard", {		
         templateUrl: 'partials/dashboard.html',		
         controller: 'DashboardCtrl',
-      })        
+      })    
+      .when("/searchproducts", {		
+        templateUrl: 'partials/searchproducts.html',		
+        controller: 'SearchProductsCtrl',
+      })         
       .otherwise('/login');
   });
