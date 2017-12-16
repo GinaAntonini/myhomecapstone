@@ -26,6 +26,11 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, LoginService){
 
 app.config(function($routeProvider){
     $routeProvider
+      .when("/create", {
+        templateUrl: 'partials/create/create.html',
+        controller: 'CreateCtrl',
+        resolve: {isAuth}
+      })
       .when("/create/newtask", {
         templateUrl: 'partials/create/newtask.html',
         controller: 'NewTaskCtrl',
@@ -34,6 +39,11 @@ app.config(function($routeProvider){
       .when("/create/newproject", {
         templateUrl: 'partials/create/newproject.html',
         controller: 'NewProjectCtrl',
+        resolve: {isAuth}
+      })
+      .when("/maintenance", {
+        templateUrl: 'partials/maintenance/maintenance.html',
+        controller: 'MaintenanceCtrl',
         resolve: {isAuth}
       })
       .when("/maintenance/viewtasks", {
@@ -59,6 +69,11 @@ app.config(function($routeProvider){
       .when("/maintenance/archives", {
         templateUrl: 'partials/maintenance/maintarchives.html',
         controller: 'MaintArchivesCtrl',
+        resolve: {isAuth}
+      })
+      .when("/improvements", {
+        templateUrl: 'partials/improvements/improvements.html',
+        controller: 'ImprovementsCtrl',
         resolve: {isAuth}
       })
       .when("/improvements/viewprojects", {

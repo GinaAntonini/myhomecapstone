@@ -2,11 +2,23 @@
 
 app.controller("DashboardCtrl", function($location, $rootScope, $scope){
 
+    $scope.getToCreate = () => {
+        $location.path("/create");
+    };
+
+    $scope.getToMaintenance = () => {
+        $location.path("/maintenance");
+    };
+
+    $scope.getToImprovements = () => {
+        $location.path("/improvements");
+    };
+    
     $scope.getToCreateANewMaintenanceTask = () => {
         $location.path("/create/newtask");
     };
 
-    $scope.getToCurrentMaintenanceItemsList = () => {
+    $scope.getToCurrentMaintenanceTasksList = () => {
         $location.path("/maintenance/viewtasks");
     };
 

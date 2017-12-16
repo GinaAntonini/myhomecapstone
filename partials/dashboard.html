@@ -1,28 +1,29 @@
 <div class="container-fluid" ng-controller="DashboardCtrl">
     <div class="row">
+        <h2 class="text-center">My Dashboard</h2>
         <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-3" ng-click="getToCreateANewMaintenanceTask()">
+                    <div class="col-md-3" ng-click="getToCreate()">
                         <div class="thumbnail dash">
-                            <img alt="Bootstrap Thumbnail First" src="/images/maintenanceicon.png" />
+                            <img alt="Bootstrap Thumbnail First" src="/images/plus.png" />
                             <div class="caption">
-                                <h3 ng-click="">Create a Maintenance Task</h3>
+                                <h3 ng-click="">Create New</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3" ng-click="getToCurrentMaintenanceItemsList()">
+                    <div class="col-md-3" ng-click="getToMaintenance()">
                         <div class="thumbnail dash">
-                            <img alt="Bootstrap Thumbnail Second" src="/images/toolbox.png" />
+                            <img alt="Bootstrap Thumbnail Second" src="/images/maintenanceicon.png" />
                             <div class="caption">
-                                <h3 ng-click="">View Current Maintenance Tasks</h3>
+                                <h3 ng-click="">Maintenance</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3" ng-click="getToSeeTasksBySeason()">
+                    <div class="col-md-3" ng-click="getToImprovements()">
                         <div class="thumbnail dash">
-                            <img alt="Bootstrap Thumbnail Third" src="/images/calendar.png" />
+                            <img alt="Bootstrap Thumbnail Third" src="/images/toolbox.png" />
                             <div class="caption">
-                                <h3>See Tasks By Season</h3>
+                                <h3>Improvements</h3>
                             </div>
                         </div>
                     </div>
@@ -30,49 +31,10 @@
                         <div class="thumbnail dash">
                             <img alt="Bootstrap Thumbnail Fourth" src="/images/shoppingcart.png" />
                             <div class="caption">
-                                <h3>Add to Task Materials List</h3>
+                                <h3>Buy Materials</h3>
                             </div>
                         </div>
                     </div>
                 </div>
         </div>
     </div>
-    <div class="row">
-            <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-3" ng-click="getToCreateANewImprovementProject()">
-                            <div class="thumbnail dash">
-                                <img alt="Bootstrap Thumbnail First" src="/images/maintenancelist.png" />
-                                <div class="caption">
-                                    <h3 ng-click="">Create a Home Improvement Project</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3" ng-click="getToCurrentImprovementProjectsList()">
-                            <div class="thumbnail dash">
-                                <img alt="Bootstrap Thumbnail Second" src="/images/projects.png" />
-                                <div class="caption">
-                                    <h3 ng-click="">View Current Projects</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3" ng-click="getToSeeProjectsBySeason()">
-                            <div class="thumbnail dash">
-                                <img alt="Bootstrap Thumbnail Third" src="/images/calendar.png" />
-                                <div class="caption">
-                                    <h3>See Projects By Season</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3" ng-click="getToSearchProducts()">
-                                <div class="thumbnail dash">
-                                    <img alt="Bootstrap Thumbnail Fourth" src="/images/shoppingcart.png" />
-                                    <div class="caption">
-                                        <h3>Add to Project Materials List</h3>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-            </div>
-        </div>
-</div>
