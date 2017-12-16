@@ -1,16 +1,30 @@
 <div class="search" ng-controller="SearchProductsCtrl">
     <div class="input-group col-xs-6 col-xs-offset-3">
-        <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
-        <input ng-keypress="onEnterSearch($event)" type="text" class="form-control" aria-describedby="basic-addon1">
+        <input ng-keypress="onEnterSearch($event)" type="text" class="form-control" placeholder="Search here for materials to buy" aria-describedby="basic-addon1">
     </div>
-        <div id="products">
-            <div ng-repeat="item in items" class="col-sm-6 col-md-4 product">
+        <div id="items">
+            <div ng-repeat="item in items" class="col-md-3 item">
                 <div class="thumbnail">
                     <img class="itemImage" src="{{item.mediumImage}}">
-                    <h3 class="itemTitle">{{item.name}}</h3>
+                    <h4 class="itemTitle">{{item.name}}</h4>
                     <p class="salePrice">${{item.salePrice}}</p>
+                    <div>
+                        <a href="{{item.addToCartUrl}}"><button class="btn btn-primary">Add To Cart</button></a>
+                        <div class="dropdown">
+                            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary">
+                                Add Item To Buy List <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" ng-click="">Add To A Task</a>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" ng-click="">Add To A Project</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>
