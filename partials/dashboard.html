@@ -1,9 +1,8 @@
 <div class="container-fluid" ng-controller="DashboardCtrl">
     <div class="row">
         <div class="col-md-12">
-            <h2>Welcome, Gina!</h2>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3" ng-click="getToCreateANewMaintenanceTask()">
                         <div class="thumbnail dash">
                             <img alt="Bootstrap Thumbnail First" src="/images/maintenanceicon.png" />
                             <div class="caption">
@@ -11,7 +10,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3" ng-click="getToCurrentMaintenanceItemsList()">
                         <div class="thumbnail dash">
                             <img alt="Bootstrap Thumbnail Second" src="/images/toolbox.png" />
                             <div class="caption">
@@ -19,7 +18,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3" ng-click="getToSearchProducts()">
+                    <div class="col-md-3" ng-click="getToSeeTasksBySeason()">
                         <div class="thumbnail dash">
                             <img alt="Bootstrap Thumbnail Third" src="/images/calendar.png" />
                             <div class="caption">
@@ -41,7 +40,7 @@
     <div class="row">
             <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3" ng-click="getToCreateANewImprovementProject()">
                             <div class="thumbnail dash">
                                 <img alt="Bootstrap Thumbnail First" src="/images/maintenancelist.png" />
                                 <div class="caption">
@@ -49,7 +48,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3" ng-click="getToCurrentImprovementProjectsList()">
                             <div class="thumbnail dash">
                                 <img alt="Bootstrap Thumbnail Second" src="/images/projects.png" />
                                 <div class="caption">
@@ -57,7 +56,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3" ng-click="getToSeeProjectsBySeason()">
                             <div class="thumbnail dash">
                                 <img alt="Bootstrap Thumbnail Third" src="/images/calendar.png" />
                                 <div class="caption">
@@ -65,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3" ng-click="getToSearchProducts()">
                                 <div class="thumbnail dash">
                                     <img alt="Bootstrap Thumbnail Fourth" src="/images/shoppingcart.png" />
                                     <div class="caption">
