@@ -2,14 +2,29 @@
   display: flex;
   flex-direction: column;
   flex-wrap: row;
-  margin: 5px; }
+  margin: 0 auto; }
 
 .eachtask {
-  width: 100%; }
+  width: 100%;
+  margin: 4%; }
 
 .task {
-  border: 2px solid black;
-  margin: 2%; }
+  border: 2px solid white;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  border-radius: 2%;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+  box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43); }
+
+.taskheadline {
+  text-align: center; }
+
+.materialsheadline {
+  text-align: center; }
 
 .seasonButtons {
   display: inline-flex;
@@ -32,3 +47,6 @@
 .dash:hover {
   background-color: #20B2AA;
   color: white; }
+
+#items {
+  margin-top: 4%; }
