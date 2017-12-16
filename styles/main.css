@@ -28,3 +28,7 @@
 
 .seasonHeading {
   padding-bottom: 2%; }
+
+.dash:hover {
+  background-color: #20B2AA;
+  color: white; }

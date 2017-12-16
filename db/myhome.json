@@ -11,7 +11,7 @@
             "frequency": "Semi-Annual",
 			"projectedCost": 22,
             "toolsRequired": "Ladder, wasp mask",
-            "materialsToPurchase": "gloves, wasp mask",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/U6sBztzINGo",
             "completed": true,
@@ -28,7 +28,7 @@
             "frequency": "Semi-Annually",
 			"projectedCost": 0,
             "toolsRequired": "pressure washer",
-            "materialsToPurchase": "none",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/aRv1I2mk7Fc",
             "completed": false,
@@ -45,7 +45,7 @@
             "frequency": "Annually",
 			"projectedCost": "$22",
             "toolsRequired": "Ladder, wasp mask",
-            "materialsToPurchase": "gloves",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/MSYJ-_63VbA",
             "completed": false,
@@ -62,7 +62,7 @@
             "frequency": "Annually",
 			"projectedCost": "$22",
             "toolsRequired": "Ladder, wasp mask",
-            "materialsToPurchase": "gloves",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/H4ymTnaFRgU",
             "completed": true,
@@ -79,7 +79,7 @@
             "frequency": "Monthly",
 			"projectedCost": 15,
             "toolsRequired": "none",
-            "materialsToPurchase": "Air Filter",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/YRcSA8pZBFk",
             "completed": true,
@@ -96,7 +96,7 @@
             "frequency": "Annually",
 			"projectedCost": "$22",
             "toolsRequired": "Ladder, wasp mask",
-            "materialsToPurchase": "gloves",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/9eYtItPh5No",
             "completed": false,
@@ -113,7 +113,7 @@
             "frequency": "Quarterly",
 			"projectedCost": 0,
             "toolsRequired": "Vacuum",
-            "materialsToPurchase": "none",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/cgHcsDMbMNs",
             "completed": false,
@@ -130,7 +130,7 @@
             "frequency": "Semi-Annual",
 			"projectedCost": "$22",
             "toolsRequired": "Ladder, wasp mask",
-            "materialsToPurchase": "gloves",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/4ch30NCj1b0",
             "completed": false,
@@ -147,7 +147,7 @@
             "frequency": "Once",
 			"projectedCost": "$22",
             "toolsRequired": "Ladder, wasp mask",
-            "materialsToPurchase": "gloves",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/JU7X0-oR99A",
             "completed": false,
@@ -164,7 +164,7 @@
             "frequency": "Quarterly",
 			"projectedCost": "$22",
             "toolsRequired": null,
-            "materialsToPurchase": "Ortho",
+            "materialsToPurchaseId": 1,
             "contractorNeeded": false,
             "linkToDiy":"https://www.youtube.com/embed/JU7X0-oR99A",
             "completed": false,
@@ -392,5 +392,43 @@
             "completed": true,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         }
+    },
+    "materials": {
+		"material0": {
+            "materialId": 200,
+            "image": "https://i5.walmartimages.com/asr/0691ba65-dc85-4522-bdfe-d50a446cc996_1.78f0e74c8fcca94233585e7859f8ae9e.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "name": "Duracell Coppertop AA Batteries, 16 ct",
+            "salePrice": "11.78",
+            "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
+        },
+        "material1": {
+            "materialId": 201,
+            "image": "https://i5.walmartimages.com/asr/0691ba65-dc85-4522-bdfe-d50a446cc996_1.78f0e74c8fcca94233585e7859f8ae9e.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "name": "Duracell Coppertop AA Batteries, 16 ct",
+            "salePrice": "11.78",
+            "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
+        },
+        "material2": {
+            "materialId": 202,
+            "image": "https://i5.walmartimages.com/asr/0691ba65-dc85-4522-bdfe-d50a446cc996_1.78f0e74c8fcca94233585e7859f8ae9e.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "name": "Duracell Coppertop AA Batteries, 16 ct",
+            "salePrice": "11.78",
+            "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
+        },
+        "material3": {
+            "materialId": 203,
+            "image": "https://i5.walmartimages.com/asr/0691ba65-dc85-4522-bdfe-d50a446cc996_1.78f0e74c8fcca94233585e7859f8ae9e.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "name": "Duracell Coppertop AA Batteries, 16 ct",
+            "salePrice": "11.78",
+            "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
+		},
+        "material4": {
+            "materialId": 204,
+            "image": "https://i5.walmartimages.com/asr/0691ba65-dc85-4522-bdfe-d50a446cc996_1.78f0e74c8fcca94233585e7859f8ae9e.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "name": "Duracell Coppertop AA Batteries, 16 ct",
+            "salePrice": "11.78",
+            "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
+		}
+
     }
 }

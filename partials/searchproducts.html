@@ -3,13 +3,14 @@
         <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
         <input ng-keypress="onEnterSearch($event)" type="text" class="form-control" aria-describedby="basic-addon1">
     </div>
-        <div id="products">
-            <div ng-repeat="item in items" class="col-sm-6 col-md-4 product">
+        <div id="items">
+            <div ng-repeat="item in items" class="col-sm-6 col-md-4 item">
                 <div class="thumbnail">
                     <img class="itemImage" src="{{item.mediumImage}}">
                     <h3 class="itemTitle">{{item.name}}</h3>
                     <p class="salePrice">${{item.salePrice}}</p>
                     <a href="{{item.addToCartUrl}}">Add To Your Cart</a>
+                    <button><a class="btn btn-primary review" role="button" ng-click="saveToProject(item)">Review</a></button>
                 </div>
             </div>
         </div>
