@@ -13,4 +13,12 @@ app.controller("SearchProductsCtrl", function($location, $rootScope, $scope, Wal
             });
         }
     };
+
+    $scope.goToTaskList = () => {
+        $location.path("/maintenance/materials");
+    };
+
+    $scope.goToProjectList = () => {
+        $location.path("/improvements/materials");
+    };
 });
