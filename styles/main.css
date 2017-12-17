@@ -50,3 +50,11 @@
 
 #items {
   margin-top: 4%; }
+
+.project:hover {
+  background-color: #5bc0de;
+  color: white; }
+
+.thetasks:hover {
+  background-color: #5bc0de;
+  color: white; }

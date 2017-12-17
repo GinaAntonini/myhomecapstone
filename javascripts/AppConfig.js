@@ -71,6 +71,11 @@ app.config(function($routeProvider){
         controller: 'MaintArchivesCtrl',
         resolve: {isAuth}
       })
+      .when("/maintenance/materials", {
+        templateUrl: 'partials/maintenance/taskmaterials.html',
+        controller: 'MaintenanceMaterialsCtrl',
+        resolve: {isAuth}
+      })
       .when("/improvements", {
         templateUrl: 'partials/improvements/improvements.html',
         controller: 'ImprovementsCtrl',
@@ -94,6 +99,11 @@ app.config(function($routeProvider){
       .when("/improvements/archives", {
         templateUrl: 'partials/improvements/improvearchives.html',
         controller: 'ImproveArchivesCtrl',
+        resolve: {isAuth}
+      })
+      .when("/improvements/materials", {
+        templateUrl: 'partials/improvements/projectmaterials.html',
+        controller: 'ImprovementsMaterialsCtrl',
         resolve: {isAuth}
       })
       .when("/improvements/detail/:id", {
