@@ -108,7 +108,7 @@
 			"projectedCost": 0,
             "toolsRequired": "Vacuum",
             "contractorNeeded": false,
-            "linkToDiy":"https://www.youtube.com/embed/cgHcsDMbMNs",
+            "linkToDiy":"cgHcsDMbMNs",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -124,7 +124,7 @@
 			"projectedCost": "$22",
             "toolsRequired": "Ladder, wasp mask",
             "contractorNeeded": false,
-            "linkToDiy":"https://www.youtube.com/embed/4ch30NCj1b0",
+            "linkToDiy":"4ch30NCj1b0",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -278,7 +278,7 @@
             "toolsRequired": "Shovel",
             "materialsToBuy": "Mulch",
             "contractorNeeded": false,
-            "linkToDiy":"https://www.youtube.com/embed/SL6t5SUrat0",
+            "linkToDiy":"SL6t5SUrat0",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -318,7 +318,7 @@
             "toolsRequired": "Not sure yet",
             "materialsToBuy": "Fan",
             "contractorNeeded": false,
-            "linkToDiy":"https://www.youtube.com/embed/SL6t5SUrat0",
+            "linkToDiy":"SL6t5SUrat0",
             "completed": true,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
