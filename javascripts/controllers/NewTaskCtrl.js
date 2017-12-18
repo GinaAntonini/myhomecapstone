@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("NewTaskCtrl", function($http, $location, $rootScope, $scope, TaskService){
+app.controller("NewTaskCtrl", function($http, $location, $rootScope, $scope, TaskService, WalmartService, MaterialsService){
 
     $scope.addNewTaskToFirebase = () => {
         $scope.newTask.uid = $rootScope.uid;
@@ -10,6 +10,25 @@ app.controller("NewTaskCtrl", function($http, $location, $rootScope, $scope, Tas
                 $location.url("/maintenance/viewtasks");
         }).catch((error) => {
             console.log("error in addNewTaskToFirebase", error);
+        });
+    };
+
+    $scope.onEnterSearch = (event) => {
+        if(event.keyCode === 13){
+            WalmartService.searchProducts(event.target.value).then((results) => {
+                $scope.items = results.data.items;
+            }).catch((err) => {
+                console.log("error in searchProducts", err);
+            });
+        }
+    };
+
+    $scope.saveTaskMaterialToFirebase = (material) => {
+        material.uid = $rootScope.uid;
+        let newTaskMaterial = MaterialsService.createTaskMaterialObject(material);
+        MaterialsService.addNewTaskMaterial(newTaskMaterial).then(() => {
+        }).catch((err) => {
+            console.log("error in saveTaskMaterialToFirebase", err);
         });
     };
 });
