@@ -4,9 +4,8 @@
         <h4 class="season">Season to Complete: {{task.seasonToComplete}}</h4>
         <div>
             <div>
-                <div class="youtubeVideo">
-                    {{task.linkToDiy}}
-                </div>
+                <youtube id="myYoutubePlayer"><iframe>{{task.linkToDiy}}</iframe></youtube>
+            </div>
                     <p class="description">Details: {{task.taskDescription}}</p>
                     <p class="toolsRequired">Tools Required: {{task.toolsRequired}}</p>
                     <p class="materials">Materials To Purchase: {{task.materialsToPurchase}}</p>
