@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("ViewTasksCtrl", function($location, $rootScope, $scope, TaskService){
+app.controller("ViewTasksCtrl", function($location, $rootScope, $scope, TaskService, MaterialsService){
 	
     const getTasks = () => {
     		TaskService.getCurrentTasksFromFirebase($rootScope.uid).then((results) => {
@@ -26,5 +26,14 @@ app.controller("ViewTasksCtrl", function($location, $rootScope, $scope, TaskServ
 	$scope.viewTaskDetail = (taskId) => {
 		$location.path(`/maintenance/detail/${taskId}`);
 	};
+
+	const getMaterialsForTasks = () => {
+		MaterialsService.getSelectedTaskMaterials($rootScope.uid).then((results) => {
+			$scope.taskmaterials = results;
+		}).catch((err) => {
+			console.log("error in getMaterialsForTasks", err);
+		});
+	};
+	getMaterialsForTasks();
 
 });

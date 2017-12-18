@@ -9,7 +9,7 @@ app.service("MaterialsService", function($http, $q, FIREBASE_CONFIG){
 				Object.keys(fbTaskMaterials).forEach((key) =>{
 					fbTaskMaterials[key].id = key;
 						taskmaterials.push(fbTaskMaterials[key]);
-					resolve(taskmaterials);
+                    resolve(taskmaterials);
 				});
 			}).catch((err) => {
 				reject(err);
