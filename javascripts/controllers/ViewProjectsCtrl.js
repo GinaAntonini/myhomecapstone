@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("ViewProjectsCtrl", function($location, $rootScope, $scope, ProjectService){
+app.controller("ViewProjectsCtrl", function($location, $rootScope, $scope, ProjectService, MaterialsService){
     
     const getProjects = () => {
         ProjectService.getCurrentProjectsFromFirebase($rootScope.uid).then((results) => {
@@ -25,5 +25,15 @@ getProjects();
 		}).catch((err) =>{
 		console.log("error in deleteProjectFromFirebase", err);
     	});
+    };
+
+    const getMaterialsForProjects = () => {
+		MaterialsService.getSelectedProjectMaterials($rootScope.uid).then((results) => {
+			$scope.projectmaterials = results;
+		}).catch((err) => {
+			console.log("error in getMaterialsForProjects", err);
+		});
 	};
+	getMaterialsForProjects();
+    
 });
