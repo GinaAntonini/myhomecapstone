@@ -4,9 +4,8 @@
         <h4 class="season">Season to Complete: {{project.seasonToComplete}}</h4>
         <div>
             <div>
-                <div class="youtubeVideo">
-                    {{project.linkToDiy}}
-                </div>
+                <youtube id="myYoutubePlayer"><iframe>{{project.linkToDiy}}</iframe></youtube>
+            </div>
                 <p class="description">Details: {{project.projectDescription}}</p>
                 <p class="toolsRequired">Tools Required: {{project.toolsRequired}}</p>
                 <p class="materials">Materials To Purchase: {{project.materialsToPurchase}}</p>
