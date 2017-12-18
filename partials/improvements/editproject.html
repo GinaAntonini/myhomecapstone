@@ -81,11 +81,24 @@
         
         <!-- Materials To Buy -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="materials">Materials To Buy</label>  
-          <div class="col-md-8">
-          <input id="materials" name="materials" type="text" ng-model="project.materialsToBuy" placeholder="List any materials that will have to be purchased." class="form-control input-md" required="">
-          </div>
-        </div>
+            <label class="col-md-4 control-label" for="materials">Materials To Buy</label>  
+            <div class="col-md-8">
+                <input ng-keypress="onEnterSearch($event)" type="text" class="form-control" placeholder="Search here for materials to buy" aria-describedby="basic-addon1">
+                  <div id="items">
+                      <div ng-repeat="item in items" class="col-md-4 item">
+                          <div class="thumbnail">
+                              <img class="itemImage" src="{{item.mediumImage}}">
+                                    <h4 class="itemTitle">{{item.name}}</h4>
+                                    <p class="salePrice">${{item.salePrice}}</p>
+                                    <div>
+                                        <a href="{{item.addToCartUrl}}"><button class="btn btn-primary">Add To Cart</button></a>
+                                        <button class="btn btn-primary" ng-click="saveProjectMaterialToFirebase(item)">Add To Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
         
         <!-- Projected Cost -->
         <div class="form-group">
