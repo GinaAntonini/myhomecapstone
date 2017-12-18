@@ -1,6 +1,7 @@
-<div class="text-center" ng-controller="ViewProjectsCtrl">
+<div class="container-fluid text-center" ng-controller="ViewProjectsCtrl">
+    <div class="row">
         <h3>My Current Projects</h3>
-        <div class="tasks">
+        <div class="col-md-6 tasks">
             <div ng-repeat="project in projects" class="eachtask">
                 <div class="task">
                     <h3 class="projectName">{{project.projectName}}</h3>
@@ -14,4 +15,17 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-6" id="items">
+                <div ng-repeat="projectmaterial in projectmaterials" class="col-md-3 item">
+                    <div class="thumbnail">
+                        <img class="itemImage" src="{{projectmaterial.image}}">
+                        <h4 class="itemTitle">{{projectmaterial.name}}</h4>
+                        <p class="salePrice">{{projectmaterial.salePrice}}</p>
+                        <div>
+                            <a href="{{projectmaterial.addToCartUrl}}"><button class="btn btn-primary">Add To Cart</button></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 </div>
