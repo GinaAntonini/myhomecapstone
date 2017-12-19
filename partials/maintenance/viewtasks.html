@@ -1,10 +1,10 @@
 <div class="container-fluid" ng-controller="ViewTasksCtrl">
     <div class="row">
-        <h3 class="taskheadline">My Current Tasks</h3>
-        <div class="col-md-6 tasks">
+        <div class="col-md-6 tasks" id="currenttasks">
+            <h3 class="taskheadline">My Current Tasks</h3>
             <div ng-repeat="task in tasks" class="eachtask">
                 <div class="task">
-                    <h3 class="taskName">{{task.taskName}}</h3>
+                    <h5 class="taskName">{{task.taskName}}</h5>
                     <p class="season">Season to Complete: {{task.seasonToComplete}}</p>
                     <p class="category">Category: {{task.category}}</p>
                     <div class="actionbuttons">
@@ -15,11 +15,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6" id="items">
-                <div ng-repeat="taskmaterial in taskmaterials" class="col-md-6 item">
-                    <div class="thumbnail">
+        <div class="col-md-6 taskmaterials">
+            <h3 class="taskheadline">Materials List</h3>
+                <div ng-repeat="taskmaterial in taskmaterials" class="col-md-6 eachtaskmaterial">
+                    <div class="thumbnail taskmaterial">
                         <img class="itemImage" src="{{taskmaterial.image}}">
-                        <h4 class="itemTitle">{{taskmaterial.name}}</h4>
+                        <p class="itemTitle">{{taskmaterial.name}}</p>
                         <p class="salePrice">${{taskmaterial.salePrice}}</p>
                         <div>
                             <a href="{{taskmaterial.addToCartUrl}}"><button class="btn btn-primary">Add To Cart</button></a>

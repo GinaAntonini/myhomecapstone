@@ -27,6 +27,39 @@
 .materialsheadline {
   text-align: center; }
 
+.taskmaterials {
+  margin: 0 auto; }
+
+.taskmaterial {
+  border: 2px solid white;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  border-radius: 2%;
+  height: 350px;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+  box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43); }
+
+.projectheadline {
+  text-align: center; }
+
+.projectmaterials {
+  margin: 0 auto; }
+
+.projectmaterial {
+  border: 2px solid white;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  border-radius: 2%;
+  height: 350px;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+  box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43); }
+
 .seasonButtons {
   display: inline-flex;
   flex-direction: column;
