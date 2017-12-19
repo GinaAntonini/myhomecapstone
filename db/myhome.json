@@ -108,7 +108,7 @@
 			"projectedCost": 0,
             "toolsRequired": "Vacuum",
             "contractorNeeded": false,
-            "linkToDiy":"cgHcsDMbMNs",
+            "linkToDiy":"https://www.youtube.com/embed/cgHcsDMbMNs",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -124,7 +124,7 @@
 			"projectedCost": "$22",
             "toolsRequired": "Ladder, wasp mask",
             "contractorNeeded": false,
-            "linkToDiy":"4ch30NCj1b0",
+            "linkToDiy":"https://www.youtube.com/embed/4ch30NCj1b0",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -178,7 +178,7 @@
             "toolsRequired": "Contractor will provide the tools",
             "materialsToBuy": "",
             "contractorNeeded": true,
-            "linkToDiy":"null",
+            "linkToDiy":"https://www.youtube.com/embed/oPDW1xQ7_SE",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
 		},
@@ -218,7 +218,7 @@
             "toolsRequired": "Contractor will provide the tools",
             "materialsToBuy": "none, contractor will supply materials",
             "contractorNeeded": true,
-            "linkToDiy":"null",
+            "linkToDiy":"https://www.youtube.com/embed/oPDW1xQ7_SE",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
 		},
@@ -238,7 +238,7 @@
             "toolsRequired": "Contractor will provide the tools",
             "materialsToBuy": "Contractor will provide the materials",
             "contractorNeeded": true,
-            "linkToDiy":"null",
+            "linkToDiy":"https://www.youtube.com/embed/oPDW1xQ7_SE",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -258,7 +258,7 @@
             "toolsRequired": "Wheelbarrow, Shovel, Level",
             "materialsToBuy": "Stones",
             "contractorNeeded": false,
-            "linkToDiy":"null",
+            "linkToDiy":"https://www.youtube.com/embed/oPDW1xQ7_SE",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -278,7 +278,7 @@
             "toolsRequired": "Shovel",
             "materialsToBuy": "Mulch",
             "contractorNeeded": false,
-            "linkToDiy":"SL6t5SUrat0",
+            "linkToDiy":"https://www.youtube.com/embed/SL6t5SUrat0",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -298,7 +298,7 @@
             "toolsRequired": "Planer, Jointer, Table Saw, Miter Saw, Tape Measure, Level",
             "materialsToBuy": "Lumber, Polyurethane",
             "contractorNeeded": false,
-            "linkToDiy": null,
+            "linkToDiy": "https://www.youtube.com/embed/oPDW1xQ7_SE",
             "completed": false,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },
@@ -318,7 +318,7 @@
             "toolsRequired": "Not sure yet",
             "materialsToBuy": "Fan",
             "contractorNeeded": false,
-            "linkToDiy":"SL6t5SUrat0",
+            "linkToDiy":"https://www.youtube.com/embed/SL6t5SUrat0",
             "completed": true,
             "uid": "1ALqo0QCZLTMjOIHDNqDfju0PMv2"
         },

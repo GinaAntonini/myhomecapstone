@@ -125,3 +125,10 @@ app.config(function($routeProvider){
       })         
       .otherwise('/login');
   });
+
+  app.config(function($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+      'self',
+      '*://www.youtube.com/**'
+    ]);
+  });
