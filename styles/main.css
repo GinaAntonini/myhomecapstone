@@ -89,7 +89,8 @@ body {
 
 .dash {
   background-color: rgba(250, 250, 250, 0.753);
-  color: white; }
+  color: white;
+  border-radius: 2%; }
 
 .dashHeadline {
   margin-bottom: 5%; }
@@ -98,8 +99,32 @@ body {
   margin: 0 auto;
   padding: 10%; }
 
+#createPage {
+  margin: 0 auto;
+  padding: 10%;
+  border-radius: 2%; }
+
+#newProjectPage {
+  margin: 0 auto;
+  padding: 1%;
+  background-color: rgba(250, 250, 250, 0.884);
+  border-radius: 2%; }
+
+#newTaskPage {
+  margin: 0 auto;
+  padding: 1%;
+  background-color: rgba(250, 250, 250, 0.884);
+  border-radius: 2%; }
+
 #items {
-  margin-top: 4%; }
+  margin: 2%; }
+
+.item {
+  border: 2px dashed #b8b8b8;
+  padding: 2%; }
+
+.formButtons {
+  margin: 0 auto; }
 
 .project:hover {
   background-color: #5bc0de;
@@ -116,3 +141,15 @@ h4 {
 h1 {
   font-family: 'Tienne', serif;
   color: black; }
+
+.materialSearchResults {
+  width: 100%; }
+
+.newItemImage {
+  width: 100%; }
+
+.newItemTitle {
+  width: 100%; }
+
+.newSalePrice {
+  width: 100%; }

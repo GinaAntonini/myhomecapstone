@@ -1,4 +1,5 @@
-<form class="form-horizontal" name="newTaskForm" ng-controller="NewTaskCtrl">
+<div class="container-fluid" id="newTaskPage">
+  <form class="form-horizontal" name="newTaskForm" ng-controller="NewTaskCtrl">
         <fieldset>
         
         <!-- Form Name -->
@@ -95,25 +96,26 @@
         </div>
         
         <!-- Materials To Buy -->
+      
         <div class="form-group">
-          <label class="col-md-4 control-label" for="materials">Materials To Buy</label>  
-          <div class="col-md-8">
-              <input ng-keypress="onEnterSearch($event)" type="text" class="form-control" placeholder="Search here for materials to buy" aria-describedby="basic-addon1">
-                <div id="taskmaterials">
-                    <div ng-repeat="item in items" class="col-md-4 item">
-                        <div class="thumbnail">
-                            <img class="itemImage" src="{{item.mediumImage}}">
-                                  <h5 class="itemTitle">{{item.name}}</h5>
-                                  <p class="salePrice">${{item.salePrice}}</p>
-                                  <div>
-                                      <a href="{{item.addToCartUrl}}"><button class="btn btn-primary">Add To Cart</button></a>
-                                      <button class="btn btn-primary" ng-click="saveTaskMaterialToFirebase(item)">Add To Task</button>
-                                  </div>
-                              </div>
+            <label class="col-md-4 control-label" for="materials">Materials To Buy</label>  
+            <div class="col-md-6">
+                <input ng-keypress="onEnterSearch($event)" type="text" class="form-control" placeholder="Search here for materials to buy" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="col-md-12" id="items">
+            <div ng-repeat="item in items" class="col-md-3 item">
+                <div class="materialSearchResults">
+                    <img class="newItemImage" src="{{item.mediumImage}}">
+                          <p class="newItemTitle">{{item.brandName}}</p>
+                          <p class="newSalePrice">${{item.salePrice}}</p>
+                          <div class="formButtons">
+                              <a href="{{item.addToCartUrl}}"><button class="btn btn-primary btn-sm">Add To Cart</button></a>
+                              <button class="btn btn-primary btn-sm" ng-click="saveTaskMaterialToFirebase(item)">Add To Project</button>
                           </div>
-                      </div>
-                    </div>
+                  </div>
               </div>
+        </div>
         
         <!-- Projected Cost -->
         <div class="form-group">
@@ -154,4 +156,5 @@
 
         </fieldset>
         </form>
+</div>
         

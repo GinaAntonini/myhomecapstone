@@ -15,7 +15,7 @@ app.controller("NewProjectCtrl", function($location, $rootScope, $scope, Project
 
     $scope.onEnterSearch = (event) => {
         if(event.keyCode === 13){
-            WalmartService.searchProducts(event.target.value).then((results) => {
+            WalmartService.searchProductsInNew(event.target.value).then((results) => {
                 $scope.items = results.data.items;
             }).catch((err) => {
                 console.log("error in searchProducts", err);
