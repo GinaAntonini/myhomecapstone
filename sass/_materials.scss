@@ -1,7 +1,16 @@
 @import 'colors';
 
 #items {
-    margin-top: 4%;
+    margin: 2%;
+}
+
+.item {
+    border: 2px dashed rgb(184, 184, 184);
+    padding: 2%;
+}
+
+.formButtons {
+    margin: 0 auto;
 }
 
 .project:hover {

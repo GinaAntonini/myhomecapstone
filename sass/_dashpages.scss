@@ -1,0 +1,41 @@
+@import 'colors';
+
+.dash:hover {
+    background-color: rgba(201, 201, 201, 0.603);
+    color: $lightColor;
+}
+
+.dash {
+    background-color: rgba(250, 250, 250, 0.753);
+    color: $lightColor;
+    border-radius: 2%;
+}
+
+.dashHeadline {
+    margin-bottom: 5%;
+}
+
+#dashboardPage {
+    margin: 0 auto;
+    padding: 10%;
+}
+
+#createPage {
+    margin: 0 auto;
+    padding: 10%;
+    border-radius: 2%;
+}
+
+#newProjectPage {
+    margin: 0 auto;
+    padding: 1%;
+    background-color: rgba(250, 250, 250, 0.884);
+    border-radius: 2%;
+}
+
+#newTaskPage {
+    margin: 0 auto;
+    padding: 1%;
+    background-color: rgba(250, 250, 250, 0.884);
+    border-radius: 2%;
+}

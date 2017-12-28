@@ -1,6 +1,6 @@
-<form class="form-horizontal" name="newProjectForm" ng-controller="NewProjectCtrl">
-        <fieldset>
-        
+<div class="container-fluid" id="newProjectPage">
+  <form class="form-horizontal" name="newProjectForm" ng-controller="NewProjectCtrl">
+  <fieldset>
         <!-- Form Name -->
         <legend>New Improvement Project</legend>
         
@@ -9,7 +9,6 @@
           <label class="col-md-4 control-label" for="Task Name">Task Name</label>  
           <div class="col-md-6">
           <input id="Task Name" name="Task Name" type="text" ng-model="newProject.projectName" placeholder="Enter a name for your project (ex. Add 2nd Bathroom)" class="form-control input-md" required="">
-            
           </div>
         </div>
         
@@ -83,23 +82,23 @@
         <!-- Materials To Buy -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="materials">Materials To Buy</label>  
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <input ng-keypress="onEnterSearch($event)" type="text" class="form-control" placeholder="Search here for materials to buy" aria-describedby="basic-addon1">
-                  <div id="items">
-                      <div ng-repeat="item in items" class="col-md-4 item">
-                          <div class="thumbnail">
-                              <img class="itemImage" src="{{item.mediumImage}}">
-                                    <h4 class="itemTitle">{{item.name}}</h4>
-                                    <p class="salePrice">${{item.salePrice}}</p>
-                                    <div>
-                                        <a href="{{item.addToCartUrl}}"><button class="btn btn-primary">Add To Cart</button></a>
-                                        <button class="btn btn-primary" ng-click="saveProjectMaterialToFirebase(item)">Add To Project</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                </div>
+            </div>
+        </div>
+        <div class="col-md-12" id="items">
+            <div ng-repeat="item in items" class="col-md-3 item">
+                <div class="materialSearchResults">
+                    <img class="newItemImage" src="{{item.mediumImage}}">
+                          <p class="newItemTitle">{{item.brandName}}</p>
+                          <p class="newSalePrice">${{item.salePrice}}</p>
+                          <div class="formButtons">
+                              <a href="{{item.addToCartUrl}}"><button class="btn btn-primary btn-sm">Add To Cart</button></a>
+                              <button class="btn btn-primary btn-sm" ng-click="saveProjectMaterialToFirebase(item)">Add To Project</button>
+                          </div>
+                  </div>
+              </div>
+        </div>
         
         <!-- Projected Cost -->
         <div class="form-group">
@@ -140,4 +139,5 @@
 
         </fieldset>
         </form>
+</div>
         
