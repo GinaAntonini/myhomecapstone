@@ -17,10 +17,10 @@
         </div>
         <div class="col-md-6 taskmaterials">
             <h3 class="taskheadline">Materials List</h3>
-                <div ng-repeat="taskmaterial in taskmaterials" class="col-md-6 eachtaskmaterial">
+                <div ng-repeat="taskmaterial in taskmaterials" class="col-md-3 eachtaskmaterial">
                     <div class="thumbnail taskmaterial">
                         <img class="itemImage" ng-src="{{taskmaterial.image}}">
-                        <p class="itemTitle">{{taskmaterial.name}}</p>
+                        <p class="itemTitle">{{taskmaterial.brandName}}</p>
                         <p class="salePrice">${{taskmaterial.salePrice}}</p>
                         <div>
                             <a href="{{taskmaterial.addToCartUrl}}"><button class="btn btn-primary">Add To Cart</button></a>

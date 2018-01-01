@@ -6,7 +6,7 @@
 }
 
 .dash {
-    background-color: rgba(250, 250, 250, 0.753);
+    background-color: rgba(250, 250, 250, 0.884);
     color: $lightColor;
     border-radius: 2%;
 }
@@ -29,13 +29,25 @@
 #newProjectPage {
     margin: 0 auto;
     padding: 1%;
-    background-color: rgba(250, 250, 250, 0.884);
+    background-color: rgba(250, 250, 250, 0.918);
     border-radius: 2%;
 }
 
 #newTaskPage {
     margin: 0 auto;
     padding: 1%;
-    background-color: rgba(250, 250, 250, 0.884);
+    background-color: rgba(250, 250, 250, 0.911);
+    border-radius: 2%;
+}
+
+#maintenancePage {
+    margin: 0 auto;
+    padding: 10%;
+    border-radius: 2%;
+}
+
+#improvementsPage {
+    margin: 0 auto;
+    padding: 10%;
     border-radius: 2%;
 }
