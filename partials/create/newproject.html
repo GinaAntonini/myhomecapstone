@@ -94,7 +94,7 @@
                           <p class="newSalePrice">${{item.salePrice}}</p>
                           <div class="formButtons">
                               <a href="{{item.addToCartUrl}}"><button class="btn btn-primary btn-sm">Add To Cart</button></a>
-                              <button class="btn btn-primary btn-sm" ng-click="saveProjectMaterialToFirebase(item)">Add To Project</button>
+                              <button class="btn btn-primary btn-sm" ng-click="saveProjectMaterialToFirebase(item); doSuccess(success)">Add To Project</button>
                           </div>
                   </div>
               </div>
