@@ -1,4 +1,4 @@
-<div class="container-fluid seasonImprovement" ng-controller="ImproveSeasonalCtrl">
+<div class="container-fluid seasonBackground">
     <div class="row">
         <div class="col-md-12">
             <h3 class="text-center text-info scheduleHeading">Seasonal Improvements Schedule</h3>
@@ -20,7 +20,7 @@
                             <th>Mark Project Completed</th>
                         </tr>
                     </thead>
-                    <tbody ng-repeat="project in projects">
+                    <tbody ng-repeat="project in projects" class="seasonTable">
                         <tr>
                             <td>{{project.projectName}}</td>
                             <td>{{project.dateToBeCompleted}}</td>
