@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("NewProjectCtrl", function($location, $rootScope, $scope, ProjectService, WalmartService, MaterialsService){
+app.controller("NewProjectCtrl", function($location, $rootScope, $scope, $window, ProjectService, WalmartService, MaterialsService){
     
     $scope.addNewProjectToFirebase = () => {
         $scope.newProject.uid = $rootScope.uid;
@@ -31,4 +31,10 @@ app.controller("NewProjectCtrl", function($location, $rootScope, $scope, Project
             console.log("error in saveProjectMaterialToFirebase", err);
         });
     };
+
+    $scope.success = 'Added to Materials List!';
+      $scope.doSuccess = function(success) {
+        $window.alert(success);
+      };
+
 });
