@@ -90,6 +90,26 @@ body {
   background-size: cover;
   background-position: fixed; }
 
+.appheadline {
+  padding-bottom: 10%; }
+
+.signin {
+  padding: 7%;
+  width: 475px;
+  height: 250px;
+  margin: 0 auto;
+  color: #000;
+  transition: background 0.5s linear; }
+
+.signin:hover {
+  background-color: rgba(255, 255, 255, 0.226);
+  border: 1px solid rgba(255, 255, 255, 0.171);
+  box-shadow: 0 0 10px #000; }
+
+.googlebutton {
+  height: 100px;
+  width: 300px; }
+
 .dash:hover {
   background-color: rgba(201, 201, 201, 0.603);
   color: white; }
@@ -97,7 +117,8 @@ body {
 .dash {
   background-color: rgba(250, 250, 250, 0.884);
   color: white;
-  border-radius: 2%; }
+  border-radius: 2%;
+  transition: background 0.5s linear; }
 
 .dashHeadline {
   margin-bottom: 5%; }

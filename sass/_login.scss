@@ -4,3 +4,28 @@ body {
     background-size: cover;
     background-position: fixed;
 }
+
+.appheadline {
+    padding-bottom: 10%;
+}
+
+.signin {
+    padding: 7%;
+    width: 475px;
+    height: 250px;
+    margin: 0 auto;
+    color: #000;
+    transition: background 0.5s linear;
+}
+
+.signin:hover {
+    background-color: rgba(255, 255, 255, 0.226);
+    border: 1px solid rgba(255, 255, 255, 0.171);
+    box-shadow: 0 0 10px #000;
+}
+
+
+.googlebutton {
+    height: 100px;
+    width: 300px;
+}
