@@ -1,8 +1,8 @@
 "use strict";
 
 app.controller("MaintenanceCtrl", function($location, $rootScope, $scope){
-    $scope.getToCreateANewMaintenanceTask = () => {
-        $location.path("/create/newtask");
+    $scope.getToSeeMaintenanceMaterials = () => {
+        $location.path("/maintenance/materials");
     };
 
     $scope.getToCurrentMaintenanceTasksList = () => {

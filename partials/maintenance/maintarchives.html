@@ -1,12 +1,12 @@
-<div class="text-center" ng-controller="MaintArchivesCtrl">
-        <h3>Maintenance Archives</h3>
+<div ng-controller="MaintArchivesCtrl">
+        <h3 class="text-center">Maintenance Archives</h3>
         <div id="custom-search-input">
             <div class="searchbar">
                 <input class="searchinput" type="text" placeholder="Search" ng-model="searchText"/>
             </div>
         </div>
         <div class="tasks">
-            <div ng-repeat="complete in completed | filter: searchText" class="col-sm-6 col-md-4">
+            <div ng-repeat="complete in completed | filter: searchText" class="col-sm-6 col-md-4 eachtask">
                 <div class="task">
                     <p class="taskName">Task Name: {{complete.taskName}}</p>
                     <p class="description">Details: {{complete.taskDescription}}</p>

@@ -18,8 +18,6 @@ app.controller("SearchProductsCtrl", function($location, $rootScope, $scope, Wal
         material.uid = $rootScope.uid;
         let newTaskMaterial = MaterialsService.createTaskMaterialObject(material);
         MaterialsService.addNewTaskMaterial(newTaskMaterial).then(() => {
-            console.log(newTaskMaterial);
-            $location.path("/maintenance/materials");
         }).catch((err) => {
             console.log("error in saveTaskMaterialToFirebase", err);
         });
@@ -29,18 +27,26 @@ app.controller("SearchProductsCtrl", function($location, $rootScope, $scope, Wal
         material.uid = $rootScope.uid;
         let newProjectMaterial = MaterialsService.createProjectMaterialObject(material);
         MaterialsService.addNewProjectMaterial(newProjectMaterial).then(() => {
-            console.log(newProjectMaterial);
-            $location.path("/improvements/materials");
         }).catch((err) => {
             console.log("error in saveMaterialToFirebase", err);
         });
     };
 
-    $scope.goToTaskList = () => {
-        $location.path("/maintenance/materials");
-    };
-
-    $scope.goToProjectList = () => {
-        $location.path("/improvements/materials");
-    };
+    const getMaterialsForTasks = () => {
+		MaterialsService.getSelectedTaskMaterials($rootScope.uid).then((results) => {
+			$scope.taskmaterials = results;
+		}).catch((err) => {
+			console.log("error in getMaterialsForTasks", err);
+		});
+	};
+    getMaterialsForTasks();
+    
+    const getMaterialsForProjects = () => {
+		MaterialsService.getSelectedProjectMaterials($rootScope.uid).then((results) => {
+			$scope.projectmaterials = results;
+		}).catch((err) => {
+			console.log("error in getMaterialsForProjects", err);
+		});
+	};
+	getMaterialsForProjects();
 });

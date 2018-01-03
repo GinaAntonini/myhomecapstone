@@ -15,18 +15,5 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 projectmaterials">
-            <h3 class="projectheadline">Materials List</h3>
-                <div ng-repeat="projectmaterial in projectmaterials" class="col-md-3 eachprojectmaterial">
-                    <div class="thumbnail projectmaterial">
-                        <img class="itemImage" ng-src="{{projectmaterial.image}}">
-                        <h4 class="itemTitle">{{projectmaterial.brandName}}</h4>
-                        <p class="salePrice">${{projectmaterial.salePrice}}</p>
-                        <div class="cartButton">
-                            <a href="{{projectmaterial.addToCartUrl}}"><button class="btn btn-primary btn-sm">Add To Cart</button></a>
-                        </div>
-                    </div>
-                </div>
-        </div>
     </div>
 </div>

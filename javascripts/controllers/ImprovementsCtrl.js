@@ -1,8 +1,8 @@
 "use strict";
 
 app.controller("ImprovementsCtrl", function($location, $rootScope, $scope){
-    $scope.getToCreateANewImprovementProject = () => {
-        $location.path("/create/newproject");
+    $scope.getToSeeProjectMaterials = () => {
+        $location.path("/improvements/materials");
     };
 
     $scope.getToCurrentImprovementProjectsList = () => {

@@ -1,6 +1,5 @@
 .tasks {
   display: flex;
-  flex-direction: column;
   flex-wrap: row;
   margin: 0 auto; }
 
@@ -24,44 +23,6 @@
 .taskheadline {
   text-align: center; }
 
-.materialsheadline {
-  text-align: center; }
-
-.taskmaterials {
-  margin: 0 auto; }
-
-.taskmaterial {
-  border: 2px solid white;
-  -webkit-border-radius: 2%;
-  -moz-border-radius: 2%;
-  border-radius: 2%;
-  height: 350px;
-  margin: 0 auto;
-  background-color: #F5F5F5;
-  -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
-  -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
-  box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43); }
-
-.projectheadline {
-  text-align: center; }
-
-.projectmaterials {
-  margin: 0 auto; }
-
-.projectmaterial {
-  border: 2px solid white;
-  -webkit-border-radius: 2%;
-  -moz-border-radius: 2%;
-  border-radius: 2%;
-  margin: 0 auto;
-  background-color: #F5F5F5;
-  -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
-  -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
-  box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43); }
-
-.cartButton {
-  padding: 2%; }
-
 .seasonButtons {
   display: inline-flex;
   flex-direction: column;
@@ -81,7 +42,8 @@
   text-decoration: none; }
 
 .seasonsinglebutton:hover {
-  background-color: rgba(255, 255, 255, 0.295); }
+  background-color: rgba(206, 204, 204, 0.555);
+  color: black; }
 
 .seasonBackground {
   box-shadow: inset 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
@@ -199,6 +161,24 @@ body {
 .thetasks:hover {
   background-color: #5bc0de;
   color: white; }
+
+.searchinput {
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("searchicon.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  outline: none; }
+
+.searchinput:focus {
+  width: 400px; }
 
 h4 {
   font-family: 'Tienne', serif;
