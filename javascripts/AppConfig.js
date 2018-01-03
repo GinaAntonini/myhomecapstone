@@ -72,8 +72,8 @@ app.config(function($routeProvider){
         resolve: {isAuth}
       })
       .when("/maintenance/materials", {
-        templateUrl: 'partials/maintenance/taskmaterials.html',
-        controller: 'MaintenanceMaterialsCtrl',
+        templateUrl: 'partials/maintenance/maintmaterials.html',
+        controller: 'SearchProductsCtrl',
         resolve: {isAuth}
       })
       .when("/improvements", {
@@ -102,8 +102,8 @@ app.config(function($routeProvider){
         resolve: {isAuth}
       })
       .when("/improvements/materials", {
-        templateUrl: 'partials/improvements/projectmaterials.html',
-        controller: 'ImprovementsMaterialsCtrl',
+        templateUrl: 'partials/improvements/improvematerials.html',
+        controller: 'SearchProductsCtrl',
         resolve: {isAuth}
       })
       .when("/improvements/detail/:id", {

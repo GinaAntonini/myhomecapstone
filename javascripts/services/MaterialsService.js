@@ -47,7 +47,7 @@ app.service("MaterialsService", function($http, $q, FIREBASE_CONFIG){
             "name": item.name,
             "salePrice": item.salePrice,
             "uid": item.uid,
-            "itemId": item.itemId            
+            "itemId": item.itemId   
         };
     };
     
@@ -57,7 +57,7 @@ app.service("MaterialsService", function($http, $q, FIREBASE_CONFIG){
             "name": item.name,
             "salePrice": item.salePrice,
             "uid": item.uid,
-            "itemId": item.itemId            
+            "itemId": item.itemId
         };
     };
 
