@@ -1,10 +1,12 @@
 .tasks {
-  display: flex;
-  flex-wrap: row;
-  margin: 0 auto; }
+  display: inline-block;
+  flex-wrap: wrap;
+  flex-flow: row;
+  margin: 0 auto;
+  justify-content: space-between; }
 
 .eachtask {
-  width: 100%;
+  width: 25%;
   margin: 4%; }
 
 .task {
@@ -12,16 +14,42 @@
   -webkit-border-radius: 2%;
   -moz-border-radius: 2%;
   border-radius: 2%;
-  height: auto;
-  width: auto;
+  height: 350px;
+  background-color: #F5F5F5;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+  box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43); }
+
+.viewTasksAndProjects {
+  padding: 2%; }
+
+.taskProjectHeadline {
+  padding-left: 2%;
+  color: #ebebeb; }
+
+.taskHeading {
+  background-color: rgba(81, 81, 119, 0.63);
+  color: #fff5e7; }
+
+.taskProjectDetail {
+  border: 2px solid white;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  border-radius: 2%;
+  width: 75%;
   margin: 0 auto;
   background-color: #F5F5F5;
   -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
   -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
   box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43); }
 
-.taskheadline {
-  text-align: center; }
+table.taskAndProjectTable th {
+  border: 1px solid #AAAAAA;
+  padding: 20px 20px; }
+
+table.taskAndProjectTable td {
+  border: 1px solid #AAAAAA;
+  padding: 10px 10px; }
 
 .seasonButtons {
   display: inline-flex;
@@ -68,16 +96,16 @@ body {
   padding-bottom: 10%; }
 
 .signin {
-  padding: 4%;
+  padding: 6%;
   width: 600px;
-  height: 200px;
+  height: 300px;
   margin: 0 auto;
   color: #000;
   transition: background 0.5s linear; }
 
 .signin:hover {
   background-color: rgba(255, 255, 255, 0.226);
-  box-shadow: 0 0 4px #000; }
+  box-shadow: 0 0 10px #000; }
 
 .googlebutton {
   height: 100px;
@@ -110,17 +138,30 @@ body {
   border-radius: 2%;
   transition: background 0.5s linear; }
 
+.dashCreate {
+  background-color: rgba(250, 250, 250, 0.884);
+  color: white;
+  border-radius: 2%;
+  transition: background 0.5s linear;
+  width: 25%;
+  padding: 3%;
+  margin: 3%;
+  height: 350px; }
+
 .dashHeadline {
   margin-bottom: 5%; }
 
 #dashboardPage {
   margin: 0 auto;
-  padding: 10%; }
+  padding: 7%; }
 
 #createPage {
   margin: 0 auto;
-  padding: 10%;
+  padding: 5%;
   border-radius: 2%; }
+
+.createButton {
+  padding: 8%; }
 
 #newProjectPage {
   margin: 0 auto;
@@ -134,15 +175,32 @@ body {
   background-color: rgba(250, 250, 250, 0.911);
   box-shadow: inset 1px 1px 15px 1px rgba(0, 0, 0, 0.2); }
 
+#editTaskPage {
+  margin: 0 auto;
+  padding: 1%;
+  background-color: rgba(250, 250, 250, 0.911);
+  box-shadow: inset 1px 1px 15px 1px rgba(0, 0, 0, 0.2); }
+
+#editProjectPage {
+  margin: 0 auto;
+  padding: 1%;
+  background-color: rgba(250, 250, 250, 0.911);
+  box-shadow: inset 1px 1px 15px 1px rgba(0, 0, 0, 0.2); }
+
 #maintenancePage {
   margin: 0 auto;
-  padding: 10%;
+  padding: 7%;
   border-radius: 2%; }
 
 #improvementsPage {
   margin: 0 auto;
   padding: 10%;
   border-radius: 2%; }
+
+#viewTasksAndProjectsPage {
+  background-color: rgba(95, 86, 86, 0.514);
+  padding: 3%;
+  margin-top: 5%; }
 
 #items {
   margin: 2%; }
