@@ -12,19 +12,34 @@
     transition: background 0.5s linear;
 }
 
+.dashCreate {
+    background-color: rgba(250, 250, 250, 0.884);
+    color: white;
+    border-radius: 2%;
+    transition: background 0.5s linear;
+    width: 25%;
+    padding: 3%;
+    margin: 3%;
+    height: 350px;
+}
+
 .dashHeadline {
     margin-bottom: 5%;
 }
 
 #dashboardPage {
     margin: 0 auto;
-    padding: 10%;
+    padding: 7%;
 }
 
 #createPage {
     margin: 0 auto;
-    padding: 10%;
+    padding: 5%;
     border-radius: 2%;
+}
+
+.createButton {
+   padding: 8%; 
 }
 
 #newProjectPage {
@@ -41,9 +56,23 @@
     box-shadow: inset 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
 }
 
+#editTaskPage{
+    margin: 0 auto;
+    padding: 1%;
+    background-color: rgba(250, 250, 250, 0.911);
+    box-shadow: inset 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+#editProjectPage{
+    margin: 0 auto;
+    padding: 1%;
+    background-color: rgba(250, 250, 250, 0.911);
+    box-shadow: inset 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
 #maintenancePage {
     margin: 0 auto;
-    padding: 10%;
+    padding: 7%;
     border-radius: 2%;
 }
 
@@ -51,4 +80,10 @@
     margin: 0 auto;
     padding: 10%;
     border-radius: 2%;
+}
+
+#viewTasksAndProjectsPage {
+    background-color: rgba(95, 86, 86, 0.514);
+    padding: 3%;
+    margin-top: 5%;
 }

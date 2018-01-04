@@ -1,11 +1,13 @@
 .tasks {
-    display: flex;
-    flex-wrap: row;
+    display: inline-block;
+    flex-wrap: wrap;
+    flex-flow: row;
     margin: 0 auto;
+    justify-content: space-between;
 }
 
 .eachtask {
-    width: 100%;
+    width: 25%;
     margin: 4%;
 }
 
@@ -14,8 +16,33 @@
     -webkit-border-radius: 2%;
     -moz-border-radius: 2%;
     border-radius: 2%;
-    height: auto;
-    width: auto;
+    height: 350px;
+    background-color: #F5F5F5;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+    -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+    box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+}
+
+.viewTasksAndProjects {
+    padding: 2%;
+}
+
+.taskProjectHeadline {
+    padding-left: 2%;
+    color: rgb(235, 235, 235);
+}
+
+.taskHeading {
+    background-color: rgba(81, 81, 119, 0.63);
+    color:#fff5e7;
+}
+
+.taskProjectDetail {
+    border: 2px solid white;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    border-radius: 2%;
+    width: 75%;
     margin: 0 auto;
     background-color: #F5F5F5;
     -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
@@ -23,7 +50,15 @@
     box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
 }
 
-.taskheadline{
-    text-align: center;
+table.taskAndProjectTable th {
+    border: 1px solid #AAAAAA;
+    padding: 20px 20px;
+  }
+
+table.taskAndProjectTable td {
+    border: 1px solid #AAAAAA;
+    padding: 10px 10px;
 }
+
+
 

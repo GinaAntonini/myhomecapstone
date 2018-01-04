@@ -1,25 +1,24 @@
 <div class="container-fluid" id="createPage">
         <div class="row">
             <h1 class="text-center dashHeadline">Create New</h1>
-            <div class="col-md-12 ">
-                <div class="row">
-                    <div class="col-md-6" ng-click="getToCreateANewMaintenanceTask()">
-                        <div class="thumbnail dash">
+        </div>
+            <div class="col-xs-12 col-md-offset-2">
+                    <div ng-click="getToCreateANewMaintenanceTask()">
+                        <div class="col-xs-6 thumbnail dashCreate">
                             <img alt="Bootstrap Thumbnail First" src="/images/maintenanceicon.png" />
                             <div class="caption">
                                 <h4>Create Maintenance Task</h4>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" ng-click="getToCreateANewImprovementProject()">
-                        <div class="thumbnail dash">
+                    <div ng-click="getToCreateANewImprovementProject()">
+                        <div class="col-xs-6 thumbnail dashCreate">
                             <img alt="Bootstrap Thumbnail Second" src="/images/maintenancelist.png" />
                             <div class="caption">
                                 <h4>Create Home Improvement Project</h4>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     <h3><a class="btn" ng-click="getBackToDashboard()">Go Back To Dashboard »</a></h3>

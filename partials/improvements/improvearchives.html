@@ -6,9 +6,9 @@
             </div>
         </div>
         <div class="tasks">
-            <div ng-repeat="complete in completed | filter: searchText" class="col-sm-6 col-md-4 eachtask">
+            <div ng-repeat="complete in completed | filter: searchText" class="col-sm-6 eachtask">
                 <div class="task">
-                    <p class="projectName">Task Name: {{complete.projectName}}</p>
+                    <h3 class="projectName">{{complete.projectName}}</h3>
                     <p class="description">Details: {{complete.projectDescription}}</p>
                     <p class="category">Category: {{complete.category}}</p>
                     <p class="toolsRequired">Tools Required: {{complete.toolsRequired}}</p>

@@ -1,19 +1,39 @@
-<div class="container-fluid text-center" ng-controller="ViewProjectsCtrl">
-    <div class="row">
-        <h3>My Current Projects</h3>
-        <div class="col-md-6 tasks">
-            <div ng-repeat="project in projects" class="eachtask">
-                <div class="task">
-                    <h3 class="projectName">{{project.projectName}}</h3>
-                    <p class="season">Season to Complete: {{project.seasonToComplete}}</p>
-                    <p class="category">Category: {{project.category}}</p>
-                    <div class="actionbuttons">
-                        <button class="btn btn-default" ng-click="editProject(project.id)">Edit Project <i class="fa fa-edit"></i></button>
-                        <button class="btn btn-default" ng-click="deleteProjectFromFirebase(project.id)">Delete Task<i class="fa fa-trash-o"></i></button>
-                        <button class="btn btn-default" ng-click="viewProjectDetail(project.id)">View Detail<i class="fa fa-search-plus"></i></button>
-                    </div>
-                </div>
+<div class="container-fluid" ng-controller="ViewProjectsCtrl" id="viewTasksAndProjectsPage">
+        <div class="row">
+            <h2 class="taskProjectHeadline">My Current Projects</h2>
+        </div>
+        <div class="row viewTasksAndProjects">
+            <div>
+                <table class="table table-hover table-striped taskAndProjectTable">
+                    <thead>
+                        <tr class="taskHeading">
+                            <th></th>
+                            <th>Project Name</th>
+                            <th>Date To Be Complete</th>
+                            <th>Contractor/DIY?</th>
+                            <th>Permit Needed</th>
+                            <th>Edit Project</th>
+                            <th>Delete Project</th>
+                            <th>View Details</th>
+                            <th>Mark Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="project in projects">
+                        <tr>
+                            <td>{{$index + 1}}</td>
+                            <td>{{project.projectName}}</td>
+                            <td>{{project.dateToBeCompleted}}</td>
+                            <td>{{project.contractorNeeded}}</td>
+                            <td>{{project.permitNeeded}}</td>
+                            <td class="text-center"><button class="btn btn-default" ng-click="editProject(project.id)"><i class="fa fa-edit"></i></button></td>
+                            <td class="text-center"><class><button class="btn btn-default" ng-click="deleteProjectFromFirebase(project.id)"><i class="fa fa-trash-o"></i></button></td>
+                            <td class="text-center"><button class="btn btn-default" ng-click="viewProjectDetail(project.id)"><i class="fa fa-search-plus"></i></button></td>
+                            <td class="text-center"><button class="btn btn-default" ng-click="markProjectCompleted(project)"><i class="fa fa-check-square-o"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>
-</div>
+
+
+
