@@ -1,32 +1,32 @@
 <div class="container-fluid" ng-controller="ViewTasksCtrl" id="viewTasksAndProjectsPage">
     <div class="row">
-        <h2 class="taskProjectHeadline">My Current Tasks</h2>
+        <h2 class="taskProjectHeadline">myTasks</h2>
     </div>
     <div class="row viewTasksAndProjects">
         <div>
-            <table class="table table-hover table-striped taskAndProjectTable">
+            <table class="layout display taskAndProjectTable">
                 <thead>
                     <tr class="taskHeading">
                         <th></th>
                         <th>Task Name</th>
                         <th>Date To Be Complete</th>
-                        <th>Category</th>
-                        <th>Edit Task</th>
-                        <th>Delete Task</th>
-                        <th>View Details</th>
-                        <th>Mark Completed</th>
+                        <th>Urgency</th>
+                        <th>Frequency</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody ng-repeat="task in tasks">
                     <tr>
-                        <td>{{$index + 1}}</td>
-                        <td>{{task.taskName}}</td>
-                        <td>{{task.dateToBeCompleted}}</td>
-                        <td>{{task.category}}</td>
-                        <td class="text-center"><button class="btn btn-default" ng-click="editTask(task.id)">Edit Task <i class="fa fa-edit"></i></button></td>
-                        <td class="text-center"><class><button class="btn btn-default" ng-click="deleteTaskFromFirebase(task.id)">Delete Task<i class="fa fa-trash-o"></i></button></td>
-                        <td class="text-center"><button class="btn btn-default" ng-click="viewTaskDetail(task.id)"><i class="fa fa-search-plus"></i></button></td>
-                        <td class="text-center"><button class="btn btn-default" ng-click="markTaskCompleted(task)"><i class="fa fa-check-square-o"></i></button></td>
+                        <td class="tablenumber">{{$index + 1}}</td>
+                        <td class="tabletaskname">{{task.taskName}}</td>
+                        <td class="tabledate">{{task.dateToBeCompleted}}</td>
+                        <td class="tableUrgency">{{task.urgency}}</td>
+                        <td class="tableFrequency">{{task.frequency}}</td>
+                        <td class="actions">
+                            <a class="tableEditTask" ng-click="editTask(task.id)">Edit</a> 
+                            <a class="tableDeleteTask" ng-click="deleteTaskFromFirebase(task.id)">Remove</a> 
+                            <a class="tableViewTask" ng-click="viewTaskDetail(task.id)">View</a> 
+                        </td>
                     </tr>
                 </tbody>
             </table>

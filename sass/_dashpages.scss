@@ -17,18 +17,22 @@
     color: white;
     border-radius: 2%;
     transition: background 0.5s linear;
-    width: 25%;
     padding: 3%;
     margin: 3%;
-    height: 350px;
+    height: 500px;
 }
 
 .dashHeadline {
     margin-bottom: 5%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.81);
+    padding: 2%;
+    border-radius: 2%;
+    margin-left: 1.5%;
 }
 
 #dashboardPage {
-    margin: 0 auto;
+    margin: 5%;
     padding: 7%;
 }
 
@@ -38,6 +42,9 @@
     border-radius: 2%;
 }
 
+.caption {
+    padding: 2%;
+}
 .createButton {
    padding: 8%; 
 }
@@ -87,3 +94,4 @@
     padding: 3%;
     margin-top: 5%;
 }
+

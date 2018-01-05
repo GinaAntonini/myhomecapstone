@@ -2,30 +2,33 @@ body {
     background-image: url(/images/house.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed;
+    // background-position: fixed;
+}
+.layer {
+    background-color:rgba(6, 6, 6, 0.274);
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-.appheadline {
-    padding-bottom: 10%;
+.infoBoxes {
+    margin-top: 2%;
 }
 
 .signin {
-    padding: 6%;
-    width: 600px;
-    height: 300px;
-    margin: 0 auto;
+    margin-top: 5%;
     color: #000;
     transition: background 0.5s linear;
 }
 
-.signin:hover {
-    background-color: rgba(255, 255, 255, 0.226);
-    box-shadow: 0 0 10px #000;
+.googlebutton {
+    height: 10%;
+    width: 30%;
 }
 
-.googlebutton {
-    height: 100px;
-    width: 300px;
+.googlebutton:hover {
+    background-color: rgba(255, 255, 255, 0.226);
+    box-shadow: 0 0 10px #000;
 }
 
 .navbar {

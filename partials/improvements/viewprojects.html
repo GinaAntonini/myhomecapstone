@@ -1,34 +1,30 @@
 <div class="container-fluid" ng-controller="ViewProjectsCtrl" id="viewTasksAndProjectsPage">
         <div class="row">
-            <h2 class="taskProjectHeadline">My Current Projects</h2>
+            <h2 class="taskProjectHeadline">myProjects</h2>
         </div>
         <div class="row viewTasksAndProjects">
             <div>
-                <table class="table table-hover table-striped taskAndProjectTable">
+                <table class="layout display taskAndProjectTable">
                     <thead>
                         <tr class="taskHeading">
                             <th></th>
                             <th>Project Name</th>
                             <th>Date To Be Complete</th>
-                            <th>Contractor/DIY?</th>
                             <th>Permit Needed</th>
-                            <th>Edit Project</th>
-                            <th>Delete Project</th>
-                            <th>View Details</th>
-                            <th>Mark Completed</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody ng-repeat="project in projects">
                         <tr>
-                            <td>{{$index + 1}}</td>
-                            <td>{{project.projectName}}</td>
-                            <td>{{project.dateToBeCompleted}}</td>
-                            <td>{{project.contractorNeeded}}</td>
-                            <td>{{project.permitNeeded}}</td>
-                            <td class="text-center"><button class="btn btn-default" ng-click="editProject(project.id)"><i class="fa fa-edit"></i></button></td>
-                            <td class="text-center"><class><button class="btn btn-default" ng-click="deleteProjectFromFirebase(project.id)"><i class="fa fa-trash-o"></i></button></td>
-                            <td class="text-center"><button class="btn btn-default" ng-click="viewProjectDetail(project.id)"><i class="fa fa-search-plus"></i></button></td>
-                            <td class="text-center"><button class="btn btn-default" ng-click="markProjectCompleted(project)"><i class="fa fa-check-square-o"></i></button></td>
+                            <td class="tablenumber">{{$index + 1}}</td>
+                            <td class="tabletaskname">{{project.projectName}}</td>
+                            <td class="tabledate">{{project.dateToBeCompleted}}</td>
+                            <td class="tablePermit">{{project.permitNeeded}}</td>
+                            <td class="actions">
+                                    <a class="tableEditTask" ng-click="editProject(project.id)">Edit</a> 
+                                    <a class="tableDeleteTask" ng-click="deleteProjectFromFirebase(project.id)">Remove</a> 
+                                    <a class="tableViewTask" ng-click="viewProjectDetail(project.id)">View</a> 
+                                </td>
                         </tr>
                     </tbody>
                 </table>

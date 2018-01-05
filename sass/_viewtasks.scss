@@ -6,11 +6,6 @@
     justify-content: space-between;
 }
 
-.eachtask {
-    width: 25%;
-    margin: 4%;
-}
-
 .task {
     border: 2px solid white;
     -webkit-border-radius: 2%;
@@ -21,6 +16,8 @@
     -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
     -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
     box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
+    padding: 5%;
+    margin: 2%;
 }
 
 .viewTasksAndProjects {
@@ -49,16 +46,4 @@
     -moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
     box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
 }
-
-table.taskAndProjectTable th {
-    border: 1px solid #AAAAAA;
-    padding: 20px 20px;
-  }
-
-table.taskAndProjectTable td {
-    border: 1px solid #AAAAAA;
-    padding: 10px 10px;
-}
-
-
 
