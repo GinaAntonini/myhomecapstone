@@ -1,0 +1,90 @@
+table.taskAndProjectTable th {
+    border: 1px solid #AAAAAA;
+    padding: 20px 20px;
+  }
+
+table.taskAndProjectTable td {
+    border: 1px solid #AAAAAA;
+    padding: 10px 10px;
+}
+
+table th, table td { 
+    text-align: left;
+}
+
+table.layout{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.display{
+    margin: 1em 0;
+}
+
+table.display th, table.display td {
+    border: 1px solid #B3BFAA;
+    padding: .5em 1em;
+}
+  
+table.display th{ 
+    background: rgba(53, 53, 53, 0.527); 
+    color: white;
+}
+
+table.display td{ 
+    background: #fff; 
+}
+  
+table.taskAndProjectTable{
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 30em){
+    table.taskAndProjectTable{
+        box-shadow: none;  
+    }
+    table.taskAndProjectTable thead{
+        display: none; 
+    }
+    table.display th, table.display td{
+      padding: .5em;
+    }
+    table.taskAndProjectTable td:nth-child(1):before{
+      content: 'Number';
+      color: white;
+    }
+    table.taskAndProjectTable td:nth-child(2):before{
+      content: 'Task:';
+    }
+    table.taskAndProjectTable td:nth-child(1),
+    table.taskAndProjectTable td:nth-child(2){
+      padding-left: 25%;
+    }
+    table.taskAndProjectTable td:nth-child(1):before,
+    table.taskAndProjectTable td:nth-child(2):before{
+      position: absolute;
+      left: .5em;
+      font-weight: bold;
+    }
+    table.taskAndProjectTable tr, table.taskAndProjectTable td{
+          display: block;
+    }
+    table.taskAndProjectTable tr{
+        position: relative;
+        margin-bottom: 1em;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    }
+    table.taskAndProjectTable td{
+        border-top: none;
+    }
+    table.taskAndProjectTable td.tablenumber{
+        background: rgba(53, 53, 53, 0.527); 
+        border-top: 1px solid #B3BFAA;
+    }
+    table.taskAndProjectTable td.actions{
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        background: none;
+    }
+}

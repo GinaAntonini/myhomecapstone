@@ -36,19 +36,9 @@ app.controller("ViewTasksCtrl", function($location, $rootScope, $scope, TaskServ
 	};
 	getMaterialsForTasks();
 
-	const getSeasonToComplete = (season) => {
-        TaskService.getSeasonsFromFirebase(season).then((results) => {
-        	$scope.tasks = results;
-    	}).catch((err) => {
-        	console.log("error in getSeasonToComplete", err);
-    	});
-    }; 
-    getSeasonToComplete("Spring");
-
 	$scope.markTaskCompleted = (task) => {
 		task.completed = !task.completed;
 		TaskService.markCompleted(task.id, task.completed).then(() => {
-           getSeasonToComplete(task.seasonToComplete);
         }).catch((err) => {
             console.log("error in markTaskCompleted", err);
         });
