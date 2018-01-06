@@ -91,13 +91,15 @@ body {
   margin-top: 2%; }
 
 .signin {
+  display: block;
   margin-top: 5%;
-  color: #000;
-  transition: background 0.5s linear; }
+  color: #000; }
 
 .googlebutton {
+  padding: 5%;
   height: 10%;
-  width: 30%; }
+  width: 30%;
+  transition: background 0.5s linear; }
 
 .googlebutton:hover {
   background-color: rgba(255, 255, 255, 0.226);
@@ -205,8 +207,7 @@ body {
   margin: 2%; }
 
 .item {
-  border: 2px dashed #b8b8b8;
-  padding: 2%; }
+  padding: 1%; }
 
 .formButtons {
   margin: 0 auto; }

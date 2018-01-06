@@ -16,14 +16,16 @@ body {
 }
 
 .signin {
+    display: block;
     margin-top: 5%;
     color: #000;
-    transition: background 0.5s linear;
 }
 
 .googlebutton {
+    padding: 5%;
     height: 10%;
     width: 30%;
+    transition: background 0.5s linear;
 }
 
 .googlebutton:hover {
