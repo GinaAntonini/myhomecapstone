@@ -2,17 +2,16 @@
     <div>
         <h3 class="text-center">{{task.taskName}}</h3>
         <h4 class="col-xs-6 category">Category: {{task.category}}</h4>
+        <h4 class="col-xs-6">Date to Be Completed: {{task.dateToBeCompleted}}</h4>
         <h4 class="col-xs-6 season">Season to Complete: {{task.seasonToComplete}}</h4>
         <h4 class="col-xs-6">Frequency: {{task.frequency}}</h4>
         <h4 class="col-xs-6">Priority: {{task.urgency}}</h4>
-        <h4 class="col-xs-6 cost">Projected Cost: {{task.projectedCost}}</h4>
+        <h4 class="col-xs-6 cost">Projected Cost:${{task.projectedCost}}</h4>
+        <h4 class="col-xs-6 description">Details: {{task.taskDescription}}</h4>
+        <h4 class="col-xs-6 toolsRequired">Tools Required: {{task.toolsRequired}}</h4>
         <div>
             <div>
-                <iframe width="75%" height="450" ng-src="{{task.linkToDiy}}" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-                    <p class="description">Details: {{task.taskDescription}}</p>
-                    <p class="toolsRequired">Tools Required: {{task.toolsRequired}}</p>
-                    <p class="materials">Materials To Purchase: {{task.materialsToPurchase}}</p>
+                <iframe width="100%" height="450" ng-src="{{task.linkToDiy}}" frameborder="0" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>

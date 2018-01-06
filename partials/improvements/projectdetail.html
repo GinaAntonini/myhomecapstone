@@ -1,15 +1,17 @@
 <div class="text-center taskProjectDetail" ng-controller="ProjectDetailCtrl">
         <h3>{{project.projectName}}</h3>
-        <h4 class="category">Category: {{project.category}}</h4>
-        <h4 class="season">Season to Complete: {{project.seasonToComplete}}</h4>
+        <h4 class="col-xs-6 category">Category: {{project.category}}</h4>
+        <h4 class="col-xs-6 season">Season to Complete: {{project.seasonToComplete}}</h4>
+        <h4 class="col-xs-6 dateToComplete">Date to be Completed: {{project.dateToBeCompleted}}</h4>
+        <h4 class="col-xs-6 measurements">Important Measurements: {{project.measurements}}</h4>
+        <h4 class="col-xs-6 budget">Budget: {{project.budget}}</h4>
+        <h4 class="col-xs-6 actualCost">Actual Cost: {{project.actualCost}}</h4>
+        <h4 class="col-xs-6 toolsRequired">Tools Required: {{project.toolsRequired}}</h4>
+        <h4 class="col-xs-6 materials">Materials To Purchase: {{project.materialsToPurchase}}</h4>
+        <h4 class="col-xs-12 description">Details: {{project.projectDescription}}</h4>
         <div>
             <div>
                 <iframe width="100%" height="450" src="{{project.linkToDiy}}" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-                <p class="description">Details: {{project.projectDescription}}</p>
-                <p class="toolsRequired">Tools Required: {{project.toolsRequired}}</p>
-                <p class="materials">Materials To Purchase: {{project.materialsToPurchase}}</p>
-                <p class="cost">Projected Cost: {{project.projectedCost}}</p>
             </div>
         </div>
 </div>

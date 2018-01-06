@@ -34,7 +34,7 @@
   -webkit-border-radius: 2%;
   -moz-border-radius: 2%;
   border-radius: 2%;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
   background-color: #F5F5F5;
   -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.43);
@@ -96,12 +96,12 @@ body {
   color: #000; }
 
 .googlebutton {
-  padding: 5%;
+  padding: 2%;
   height: 10%;
-  width: 30%;
-  transition: background 0.5s linear; }
+  width: 30%; }
 
-.googlebutton:hover {
+.signin:hover {
+  transition: background 0.9s linear;
   background-color: rgba(255, 255, 255, 0.226);
   box-shadow: 0 0 10px #000; }
 
@@ -190,12 +190,12 @@ body {
 
 #maintenancePage {
   margin: 0 auto;
-  padding: 7%;
+  padding: 5%;
   border-radius: 2%; }
 
 #improvementsPage {
   margin: 0 auto;
-  padding: 10%;
+  padding: 5%;
   border-radius: 2%; }
 
 #viewTasksAndProjectsPage {

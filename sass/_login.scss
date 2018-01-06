@@ -22,13 +22,13 @@ body {
 }
 
 .googlebutton {
-    padding: 5%;
+    padding: 2%;
     height: 10%;
     width: 30%;
-    transition: background 0.5s linear;
 }
 
-.googlebutton:hover {
+.signin:hover {
+    transition: background 0.9s linear;
     background-color: rgba(255, 255, 255, 0.226);
     box-shadow: 0 0 10px #000;
 }
